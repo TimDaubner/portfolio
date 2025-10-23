@@ -68,17 +68,27 @@ section {
 
 .arrow_frame {
     width: 100%;
+    height: 75px;
     display: flex;
     justify-content: end;
     background-color: none;
+    padding-top: 20px;
     margin-bottom: 64px;
-    >button{
-        background:none;
+
+    >button {
+        border: 2px solid transparent;
+        background: none;
         border: none;
+
+        &:hover {
+            border: 2px solid $color-torquiose;
+        }
     }
+
     >img {
         width: 72px;
-        aspect-ratio: 1/1;
+        height: 72px;
+        object-fit: contain;
     }
 
 }

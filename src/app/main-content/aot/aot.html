@@ -4,7 +4,7 @@
             <a class="contact_btn" href="contact-me">CONTACT ME</a>
         </div>
         <div class="arrow_frame">
-            <button class="arrow"></button>
+            <button (mouseenter)="toggleImg(true)" (mouseleave)="toggleImg(false)" class="arrow"><img [src]="arrowbtn" src="assets/imgs/arrow-down.svg" alt=""></button>
         </div>
         <div>
             <h2>FRONTEND DEVELOPER</h2>
