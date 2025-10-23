@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './aot.scss'
 })
 export class Aot {
-
+  imgSrc!:string;
 }

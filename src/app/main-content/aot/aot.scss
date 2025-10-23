@@ -1,0 +1,84 @@
+$color-torquiose: #02F4BF;
+$color-darkblue: #13074E;
+$color-darkorange: #E15544;
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    >img {
+        width: 60%;
+    }
+
+    >.aot_infos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+
+        >.frame_contact_btn {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            margin-bottom: 64px;
+
+            >.contact_btn {
+                background-color: $color-darkblue;
+                padding: 16px;
+                transform: rotateZ(270deg);
+                border: 2px solid $color-torquiose;
+                color: $color-darkorange;
+                font-size: 18px;
+                transition: all 175ms ease-in;
+
+                &:hover {
+                    color: $color-torquiose;
+                }
+            }
+        }
+
+        >div {
+            >h1 {
+                margin: 0;
+                font-size: 82px;
+                color: $color-torquiose;
+                text-align: left;
+                font-weight: 700;
+            }
+
+            >h2 {
+                margin: 0;
+                font-size: 54px;
+                color: $color-torquiose;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.aot_frame {
+    background-color: #13074E;
+    width: 100%;
+    height: 100vh;
+}
+
+.arrow_frame {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: none;
+    margin-bottom: 64px;
+    >button{
+        background:none;
+        border: none;
+    }
+    >img {
+        width: 72px;
+        aspect-ratio: 1/1;
+    }
+
+}
