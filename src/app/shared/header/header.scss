@@ -1,0 +1,50 @@
+$color-torquiose: #02F4BF;
+$color-darkblue: #13074E;
+$color-darkorange: #E15544;
+
+header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    color: $color-darkorange;
+}
+
+.frame_nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    >img{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    >nav{
+        >a{
+            color: $color-darkorange;
+        }
+        color: $color-darkorange;
+        font-size: 22px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+.frame_lang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    button{
+        font-weight: 700;
+        font-size: 18px;
+        color: $color-darkorange;
+        width: 64px;
+        height: 64px;
+        border: none;
+        background-color: transparent;
+    }
+}
