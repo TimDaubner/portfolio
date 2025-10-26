@@ -7,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrl: './my-projects.scss'
 })
 export class MyProjects {
-
+  projects: {
+    name: string,
+    skills: string[],
+    description: string,
+  }[] = [{
+    name: "Join",
+    skills: ["Angular","Typescript","HTML","CSS","Firebase"],
+    description: "Loremp Ipsum"
+  },
+{
+    name: "Pokemon",
+    skills: [""],
+    description: "Loremp Ipsum"
+  },
+{
+    name: "Jump Quest",
+    skills: ["JavaScript","HTML","CSS"],
+    description: "Loremp Ipsum"
+  },
+];
 }

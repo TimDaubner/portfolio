@@ -1,1 +1,9 @@
-<p>my-skills works!</p>
+<section class="frame_my_skills">
+    <h2>My Skils</h2>
+    @for (skill of skills; track $index) {
+        <div>
+            <img src="" alt="">
+            <h4>{{skill.name}}</h4>
+        </div>
+    }
+</section>
