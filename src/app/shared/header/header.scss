@@ -1,24 +1,30 @@
 $color-torquiose: #02F4BF;
 $color-darkblue: #13074E;
 $color-darkorange: #E15544;
+$color-darkblue-transparent: #13074ec8;
 
 header{
-    position: absolute;
+    position: fixed;
     width: 90%;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     color: $color-darkorange;
+    z-index: 100;
+    padding: 0 64px;
 }
 
 .frame_nav{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    >img{
+    >a{
         width: 60%;
         height: 60%;
-        background-color: transparent;
+        >img{
+            width: 100%;
+            height: 100%;
+        }
     }
     >nav{
         >a{
@@ -58,4 +64,24 @@ header{
             cursor: pointer;
         }
     }
+}
+
+.background{
+    z-index: 10;
+    position: fixed;
+    top:-20px;
+    width: 100%;
+    height: 14vh;
+    background-color: $color-darkblue;
+    filter: blur(10px);
+}
+
+.background-transparent{
+    z-index: 100;
+    position: fixed;
+    top:100px;
+    width:100%;
+    height: 5vh;
+    background-color: $color-darkblue-transparent;
+    filter: blur(10px);
 }

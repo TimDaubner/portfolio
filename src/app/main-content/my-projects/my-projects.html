@@ -1,10 +1,12 @@
-<h2>My Projects</h2>
-@for (project of projects; track $index) {
-    <h3>{{project.name}}</h3>
-    @for (skill of project.skills; track $index) {
-        <h4>{{skill}}</h4>
+<section>
+    <h2>My Projects</h2>
+    @for (project of projects; track $index) {
+        <h3>{{project.name}}</h3>
+        @for (skill of project.skills; track $index) {
+            <h4>{{skill}}</h4>
+        }
+        <p>project.description</p>
+        <a href="" class="git-btn">GitHub</a>
+        <a href="">Live Test</a>
     }
-    <p>project.description</p>
-    <a href="" class="git-btn">GitHub</a>
-    <a href="">Live Test</a>
-}
+</section>
