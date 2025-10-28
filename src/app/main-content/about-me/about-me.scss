@@ -1,3 +1,45 @@
-.frame_about_me{
-    padding: 0 64px;
+$color-torquiose: #02F4BF;
+$color-darkblue: #13074E;
+$color-darkorange: #E15544;
+
+section {
+    padding-right:  128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+
+    >img {
+        width: 65%;
+        aspect-ratio: 1.5 / 1;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        h2 {
+            color: $color-darkorange;
+            font-size: 54px;
+        }
+        
+        p{
+            color: $color-torquiose;
+        }
+
+        h3{
+            color: $color-darkorange;
+        }
+        div{
+            color: $color-torquiose;
+        }
+        button{
+            background-color: $color-torquiose;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    }
 }
