@@ -3,4 +3,20 @@
 section{
     padding: 0 64px;
     margin-bottom: 128px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        color: $color-darkorange;
+        font-size: 54px;
+    }
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    >img{
+        margin-top: 24px;
+    }
 }

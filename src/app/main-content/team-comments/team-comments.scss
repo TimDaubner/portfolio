@@ -2,4 +2,29 @@
 
 section{
     padding: 0 64px;
+    h4{
+        color: $color-darkorange;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 128px;
+}
+
+.frame{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+.comment-frame{
+    width: 250px;
+    >h5{
+        color: $color-torquiose;
+    }
+    >p{
+        color: $color-torquiose;
+    }
 }

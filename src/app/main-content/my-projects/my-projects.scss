@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 section{
-    padding: 0 64px;
+    // padding: 0 64px;
     h2{
         color: $color-darkorange;
         text-align: center;
@@ -23,7 +23,6 @@ section{
     img{
         width: 35%;
     }
-    margin-bottom: 128px;
 }
 
 .project-frame{
