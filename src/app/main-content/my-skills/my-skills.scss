@@ -1,6 +1,8 @@
 @use 'variables' as *;
 
 .frame_my_skills{
+    margin-bottom: 128px;
+
     padding: 0 64px;
     h2{
         color: $color-darkorange;

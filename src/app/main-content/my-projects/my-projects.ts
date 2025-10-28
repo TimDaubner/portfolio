@@ -9,22 +9,26 @@ import { Component } from '@angular/core';
 export class MyProjects {
   projects: {
     name: string,
+    image: string,
     skills: string[],
     description: string,
   }[] = [{
     name: "Join",
+    image: "assets/imgs/my-projects/join_project.png",
     skills: ["Angular", "Typescript", "HTML", "CSS", "Firebase"],
     description: "Loremp Ipsum"
   },
   {
     name: "Pokemon",
+    image: "assets/imgs/my-projects/pokedex_project.png",
     skills: [""],
     description: "Loremp Ipsum"
   },
   {
     name: "Jump Quest",
+    image: "assets/imgs/my-projects/jumpquest_project.png",
     skills: ["JavaScript", "HTML", "CSS"],
     description: "Loremp Ipsum"
   },
-    ];
+];
 }

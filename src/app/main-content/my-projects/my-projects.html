@@ -1,12 +1,44 @@
 <section>
     <h2>My Projects</h2>
-    @for (project of projects; track $index) {
-        <h3>{{project.name}}</h3>
-        @for (skill of project.skills; track $index) {
-            <h4>{{skill}}</h4>
+    @for (project of projects; track $index; let index = $index) {
+    <div class="project-frame">
+        @if(index % 2 == 0){
+        <img src="{{project.image}}" alt="">
+
+        <div class="project-info">
+            <h3>{{project.name}}</h3>
+            <div class="infos">
+                @for (skill of project.skills; track $index; let index = $index) {
+                    <h4>{{skill}}</h4>
+                    @if (index != projects.length + 1) {
+                        <h4 class="line"> | </h4>
+                    }
+                }
+            </div>
+            <p>{{project.description}}</p>
+            <div class="btns">
+                <a href="" class="git-btn">GitHub</a>
+                <a href="" class="live-btn">Live Test</a>
+            </div>
+        </div>
         }
-        <p>{{project.description}}</p>
-        <a href="" class="git-btn">GitHub</a>
-        <a href="" class="live-btn">Live Test</a>
+        @else {
+        <div class="project-info">
+            <h3>{{project.name}}</h3>
+            <div class="infos">
+                @for (skill of project.skills; track $index) {
+                <h4>{{skill}}</h4>
+                }
+            </div>
+            <p>{{project.description}}</p>
+            <div class="btns">
+                <a href="" class="git-btn">GitHub</a>
+                <a href="" class="live-btn">Live Test</a>
+            </div>
+        </div>
+
+        <img src="{{project.image}}" alt="">
+        }
+    </div>
     }
 </section>
