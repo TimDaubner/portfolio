@@ -1,3 +1,38 @@
+@use 'variables' as *;
+
 section{
     padding: 0 64px;
+    h2{
+        color: $color-darkorange;
+    }
+    h3{
+        color: $color-torquiose;
+    }
+    h4{
+        color: $color-torquiose;
+    }
+    p{
+        color: $color-torquiose;
+    }
+}
+
+.git-btn{
+    border: 2px solid $color-torquiose;
+    padding: 8px 16px;
+    color: $color-darkorange;
+    transition: all 175ms ease-in-out;
+    &:hover{
+        color: $color-torquiose;
+    }
+}
+
+.live-btn{
+    border: 2px solid $color-torquiose;
+    padding: 8px 16px;
+    color: $color-darkblue;
+    background-color: $color-torquiose;
+    transition: all 175ms ease-in-out;
+    &:hover{
+        color: $color-darkorange;
+    }
 }

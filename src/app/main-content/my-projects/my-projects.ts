@@ -13,18 +13,18 @@ export class MyProjects {
     description: string,
   }[] = [{
     name: "Join",
-    skills: ["Angular","Typescript","HTML","CSS","Firebase"],
+    skills: ["Angular", "Typescript", "HTML", "CSS", "Firebase"],
     description: "Loremp Ipsum"
   },
-{
+  {
     name: "Pokemon",
     skills: [""],
     description: "Loremp Ipsum"
   },
-{
+  {
     name: "Jump Quest",
-    skills: ["JavaScript","HTML","CSS"],
+    skills: ["JavaScript", "HTML", "CSS"],
     description: "Loremp Ipsum"
   },
-];
+    ];
 }
