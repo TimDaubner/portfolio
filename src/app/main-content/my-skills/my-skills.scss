@@ -1,16 +1,35 @@
 @use 'variables' as *;
 
-.frame_my_skills{
+.frame_my_skills {
     margin-bottom: 128px;
-
     padding: 0 64px;
-    h2{
+
+    h2 {
         color: $color-darkorange;
+        margin-bottom: 64px;
     }
 }
 
-.frame_skill{
-    h4{
+.frame_skill {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 24px;
+    h4 {
         color: $color-torquiose;
     }
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill_hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
