@@ -21,7 +21,7 @@ footer{
     justify-content: center;
     align-items: center;
     >a{
-        width: 60%;
+        width: 70%;
         height: 60%;
         >img{
             width: 100%;
@@ -36,9 +36,15 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    >h4{
+        font-size: 23px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
     >div{
         display: flex;
-        gap: 40px;
+        gap: 32px;
+        font-size: 14px;
     }
 }
 
