@@ -11,13 +11,9 @@ export class Aot {
   toggleImg(entered:boolean){
     if(entered){
       this.arrowbtn ="assets/imgs/arrow-down-hover.svg";
-      console.log("hover enter");
-      
     }
     else{
       this.arrowbtn ="assets/imgs/arrow-down.svg";
-      console.log("hover exit");
-      
     }
   }
 }

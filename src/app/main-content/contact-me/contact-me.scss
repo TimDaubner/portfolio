@@ -1,22 +1,83 @@
 @use 'variables' as *;
 
-section{
+section {
     padding: 0 64px;
     margin-bottom: 128px;
     display: flex;
     flex-direction: column;
-    h2{
+
+    h2 {
         color: $color-darkorange;
         font-size: 54px;
+        margin: 0;
+        margin-bottom: 16px;
     }
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
-    >img{
+
+    >img {
         margin-top: 24px;
+    }
+}
+
+.frame-contact-me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    >div {
+        gap: 16px;
+        >p {
+            font-weight: 400;
+            font-size: 18px;
+            margin: 0;
+            width: 42%;
+            color: $color-torquiose;
+            margin-right: 16px;
+        }
+        display: flex;
+    }
+    
+    .colum{
+        display: flex;
+        flex-direction: column;
+        >div {
+            gap: 16px;
+            display: flex;
+            margin-bottom: 16px;
+            color: $color-torquiose;
+    
+            >a {
+                display: flex;
+                gap: 16px;
+                color: $color-torquiose;
+                font-size: 20px;
+                align-items: center;
+    
+                >img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    .arrow_up_frame {
+        background: none;
+        border: none;
+        >img {
+            cursor: pointer;
+            border: 2px solid transparent;
+            padding: 4px;
+
+            &:hover {
+                border: 2px solid $color-torquiose;
+            }
+        }
     }
 }

@@ -1,20 +1,31 @@
 <section>
-    <div class="header"><h2>Contact me</h2><img src="assets/imgs/contact-me/arrow.svg" alt=""></div>
-    <div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quibusdam nesciunt excepturi accusantium,
-            necessitatibus totam. Quae accusantium doloremque, animi saepe deserunt error, recusandae perferendis
-            labore, et deleniti assumenda esse incidunt!</p>
+    <div class="header">
+        <h2>Contact me</h2><img src="assets/imgs/contact-me/arrow.svg" alt="">
+    </div>
+    <div class="frame-contact-me">
         <div>
-            <img src="" alt=""><div>E-mail:</div><a href="">tim.daubner@outlook.com</a>
-            <img src="" alt=""><div>Tel:</div><a href="">0151 104916 49</a>
+            <p>Encourage people to contact you and describe what role you are interested in. Express interest in
+                contributing to a new project.</p>
+            <div class="colum">
+                    <div (mouseenter)="toggleImg('mail_img','assets/imgs/contact-me/mail-hover.svg')"
+                    (mouseleave)="toggleImg('mail_img','assets/imgs/contact-me/mail.svg')">
+                    <a href="mailto:tim.daubner@outlook.com">
+                        <img src="assets/imgs/contact-me/mail.svg" alt="" [src]="mail_img">E-mail: tim.daubner@outlook.com
+                    </a>
+                </div>
+                <div (mouseenter)="toggleImg('phone_img','assets/imgs/contact-me/phone-hover.svg')"
+                (mouseleave)="toggleImg('phone_img','assets/imgs/contact-me/phone.svg')">
+                <a href="tel:015110491649">
+                    <img src="assets/imgs/contact-me/phone.svg" alt="" [src]="phone_img">Tel: 0151 104916 49
+                </a>
+            </div>
         </div>
+        </div>
+        <a href="#aot" class="arrow_up_frame">
+            <img (mouseenter)="toggleImg('arrow_img','assets/imgs/contact-me/arrowup-hover.svg')"
+                (mouseleave)="toggleImg('arrow_img','assets/imgs/contact-me/arrowup.svg')"
+                src="assets/imgs/contact-me/arrowup.svg" alt="" [src]="arrow_img">
+        </a>
     </div>
-    <div>
-        <input type="text">
-        <input type="text">
-    </div>
-    <div>
-        <input type="text">
-    </div>
-    <div><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">checkbox I've read the privacy policy and agree to the processing of my data as outlined</div>
+    <app-input/>
 </section>

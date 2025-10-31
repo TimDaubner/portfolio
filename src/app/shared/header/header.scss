@@ -28,9 +28,10 @@ header{
     }
     >nav{
         >a{
+            white-space: nowrap;
+            width: 100%;
             color: $color-darkorange;
             transition: all 175ms ease-in-out;
-            width: 100px;
             &:hover{
                 color: $color-torquiose;
             }

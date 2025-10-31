@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+.frame-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+     >textarea {
+        resize: none;
+        background-color: transparent;
+        border: 2px solid $color-torquiose;
+        padding: 16px;
+        color: $color-torquiose;
+        width: 50vw;
+
+        &::placeholder {
+            color: #02f4c098;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: darken($color-torquiose, 10%);
+            box-shadow: 0 0 6px rgba($color-torquiose, 0.5);
+        }
+    }
+}
+
+.info-data {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    >input {
+        background-color: transparent;
+        border: 2px solid $color-torquiose;
+        padding: 16px;
+        color: $color-torquiose;
+        width: 30vw;
+
+        &::placeholder {
+            color: #02f4c098;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: darken($color-torquiose, 10%);
+            box-shadow: 0 0 6px rgba($color-torquiose, 0.5);
+        }
+    }
+}
+
+.checkbox {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    align-items: center;
+    color: $color-torquiose;
+
+    input{
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $color-darkorange; // Replace with your dark orange color
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s;
+        color: $color-darkorange; 
+        padding: 9px;
+        
+        &:checked {
+            background-color: $color-torquiose;
+            border-color: $color-darkorange;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                border: solid $color-darkorange;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            background-color: $color-torquiose;
+        }
+    }
+
+    span {
+        flex: 1;
+    }
+}
