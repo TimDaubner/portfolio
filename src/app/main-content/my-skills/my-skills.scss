@@ -26,11 +26,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 175ms ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
-.skill_hover{
+.hover{
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.frame{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }

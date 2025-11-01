@@ -26,6 +26,7 @@ section {
         }
 
         p {
+            text-align: end;
             color: $color-torquiose;
         }
 
@@ -42,6 +43,10 @@ section {
             border: none;
             padding: 8px 16px;
             cursor: pointer;
+            transition: all 175ms ease-in-out;
+            &:hover{
+                color: $color-darkorange;
+            }
         }
     }
 }
