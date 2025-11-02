@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
-     >textarea {
+
+    >textarea {
         resize: none;
         background-color: transparent;
         border: 2px solid $color-torquiose;
@@ -58,7 +59,14 @@
     align-items: center;
     color: $color-torquiose;
 
-    input{
+    
+
+    span {
+        flex: 1;
+    }
+}
+
+input {
         appearance: none;
         width: 20px;
         height: 20px;
@@ -68,9 +76,9 @@
         cursor: pointer;
         position: relative;
         transition: all 0.2s;
-        color: $color-darkorange; 
+        color: $color-darkorange;
         padding: 9px;
-        
+
         &:checked {
             background-color: $color-torquiose;
             border-color: $color-darkorange;
@@ -93,7 +101,41 @@
         }
     }
 
-    span {
-        flex: 1;
+.warning{
+    width: 200px;
+    height: 100px;
+}
+
+.submit_btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    input {
+        width: 100px;
+        height: 50px;
+        border: 2px solid #6b6b6ba4;
+        color: #6b6b6ba4;
+        background-color: transparent;
+        transition: all 175ms ease-in-out;
+        font-size: 18px;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid $color-torquiose;
+            color: $color-darkorange;
+        }
+        
+        &:active {
+            border: 2px solid red;
+        }
     }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: $color-torquiose !important; /* Schriftfarbe anpassen */
 }

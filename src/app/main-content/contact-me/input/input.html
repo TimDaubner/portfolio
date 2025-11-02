@@ -1,11 +1,19 @@
-<div class="frame-input">
-    <div class="info-data">
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="frame-input">
+        <div class="info-data">
+            <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your Name" (ngModelChange)="onInputChange()" required>
+            <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your Email" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        </div>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" placeholder="Your Message"
+            required></textarea>
     </div>
-    <textarea placeholder="Your Message"></textarea>
-</div>
-<div class="checkbox">
-    <input type="checkbox" id="privacy">
-    <span>I've read the privacy policy and agree to the processing of my data as outlined</span>
-</div>
+    <div class="checkbox">
+        <input type="checkbox" id="privacy" required>
+        <span>I've read the privacy policy and agree to the processing of my data as outlined</span>
+    </div>
+    <div class="submit_btn">
+        <input type="submit" value="Send">
+    </div>
+    <span class="warning" style="color: transparent;">Please enter a message</span>
+</form>
