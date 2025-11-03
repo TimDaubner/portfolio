@@ -1,19 +1,19 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="frame-input">
         <div class="info-data">
-            <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your Name" (ngModelChange)="onInputChange()" required>
-            <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your Email" required
+            <input [(ngModel)]="contactData.name" name="name" type="text" [ngClass]="inputStyles[0]" [placeholder]= "placeholders[0]" (ngModelChange)="onInputChange($event,0)" required>
+            <input [(ngModel)]="contactData.email" name="email" type="email" [ngClass]="inputStyles[1]" [placeholder]= "placeholders[1]" (ngModelChange)="onInputChange($event,1)" required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         </div>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" placeholder="Your Message"
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" [ngClass]="inputStyles[2]"[placeholder]= "placeholders[2]" (ngModelChange)="onInputChange($event,2)"
             required></textarea>
     </div>
     <div class="checkbox">
-        <input type="checkbox" id="privacy" required>
+        <input type="checkbox" [(ngModel)]="contactData.privacy" name="privacy" id="privacy" required>
         <span>I've read the privacy policy and agree to the processing of my data as outlined</span>
     </div>
     <div class="submit_btn">
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" [disabled]="!contactForm.valid">
     </div>
     <span class="warning" style="color: transparent;">Please enter a message</span>
 </form>

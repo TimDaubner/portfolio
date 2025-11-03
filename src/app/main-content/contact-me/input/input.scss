@@ -59,7 +59,7 @@
     align-items: center;
     color: $color-torquiose;
 
-    
+
 
     span {
         flex: 1;
@@ -67,41 +67,41 @@
 }
 
 input {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid $color-darkorange; // Replace with your dark orange color
-        border-radius: 4px;
-        background-color: transparent;
-        cursor: pointer;
-        position: relative;
-        transition: all 0.2s;
-        color: $color-darkorange;
-        padding: 9px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-darkorange; // Replace with your dark orange color
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+    color: $color-darkorange;
+    padding: 9px;
 
-        &:checked {
-            background-color: $color-torquiose;
-            border-color: $color-darkorange;
+    &:checked {
+        background-color: $color-torquiose;
+        border-color: $color-darkorange;
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 2px;
-                left: 6px;
-                width: 5px;
-                height: 10px;
-                border: solid $color-darkorange;
-                border-width: 0 2px 2px 0;
-                transform: rotate(45deg);
-            }
-        }
-
-        &:hover {
-            background-color: $color-torquiose;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            width: 5px;
+            height: 10px;
+            border: solid $color-darkorange;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
     }
 
-.warning{
+    &:hover {
+        background-color: $color-torquiose;
+    }
+}
+
+.warning {
     width: 200px;
     height: 100px;
 }
@@ -110,6 +110,17 @@ input {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+
+    input[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: #333;
+        &:hover {
+            color: #6b6b6ba4;
+            border: 2px solid #6b6b6ba4;
+            cursor: default;
+        }
+    }
 
     input {
         width: 100px;
@@ -125,7 +136,7 @@ input {
             border: 2px solid $color-torquiose;
             color: $color-darkorange;
         }
-        
+
         &:active {
             border: 2px solid red;
         }
@@ -136,6 +147,19 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition: background-color 9999s ease-in-out 0s;
-  -webkit-text-fill-color: $color-torquiose !important; /* Schriftfarbe anpassen */
+    transition: background-color 9999s ease-in-out 0s;
+    -webkit-text-fill-color: $color-torquiose !important;
+    /* Schriftfarbe anpassen */
+}
+
+.placeholder-default::placeholder {
+    color: gray;
+}
+
+.placeholder-error::placeholder {
+    color: red;
+}
+
+.placeholder-success::placeholder {
+    color: limegreen;
 }

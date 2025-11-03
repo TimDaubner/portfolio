@@ -1,9 +1,10 @@
+import { NgClass, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle,NgClass],
   standalone: true,
   templateUrl: './input.html',
   styleUrl: './input.scss'
@@ -12,24 +13,48 @@ export class Input {
   contactData: {
     name: string,
     email: string,
-    message: string
+    message: string,
+    privacy: boolean
   } = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      privacy: false
     }
 
-  submitted = false;
+  placeholders: string[] = [
+    "Your Name",
+    "Your Email",
+    "Your Message"
+  ]
+
+  inputStyles: string[] = [
+    'placeholder-default', 'placeholder-default', 'placeholder-default'
+  ];
 
   onSubmit(ngForm: NgForm) {
-    this.submitted = true;
-    if (ngForm.valid && ngForm.submitted) {
+    if (ngForm.valid) {
       console.log(this.contactData);
     }
   }
 
-  onInputChange(){
-    console.log("changed");
-    
+  onInputChange(value: string, index: number) {
+    if (value != '') return;
+    switch (index) {
+      case 0:
+        this.placeholders[index] = "Your name is required";
+        this.inputStyles[index] = "placeholder-error";
+        break;
+        case 1:
+        this.placeholders[index] = "Your email is required";
+        this.inputStyles[index] = "placeholder-error";
+        break;
+        case 2:
+        this.placeholders[index] = "Your message is required";
+        this.inputStyles[index] = "placeholder-error";
+        break;
+      default:
+        break;
+    }
   }
 }
