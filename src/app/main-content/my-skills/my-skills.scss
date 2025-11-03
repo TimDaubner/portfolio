@@ -1,13 +1,14 @@
 @use 'variables' as *;
 
 .frame_my_skills {
-    margin-bottom: 128px;
     padding: 0 64px;
 
     h2 {
+        margin: 0;
         font-size: 54px;
         color: $color-darkorange;
         margin-bottom: 64px;
+        padding-top: 150px;
     }
 }
 
@@ -16,28 +17,30 @@
     grid-template-columns: auto auto auto auto auto auto;
     align-items: center;
     gap: 24px;
+
     h4 {
         color: $color-torquiose;
     }
 }
 
-.skill{
+.skill {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 175ms ease-in-out;
-    &:hover{
+
+    &:hover {
         transform: scale(1.05);
     }
 }
 
-.hover{
-    &:hover{
+.hover {
+    &:hover {
         transform: scale(1.05);
     }
 }
 
-.frame{
+.frame {
     display: flex;
 }

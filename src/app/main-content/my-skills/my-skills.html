@@ -1,11 +1,11 @@
-<section class="frame_my_skills">
+<section id="my-skills" class="frame_my_skills">
     <h2>My Skills</h2>
     <div class="frame_skill">
         @for (skill of skills; track $index; let index = $index) {
-            <div class="skill">
-                <img src="{{skill.image}}" alt="">
-                <h4>{{skill.name}}</h4>
-            </div>
+        <div class="skill">
+            <img src="{{skill.image}}" alt="">
+            <h4>{{skill.name}}</h4>
+        </div>
         }
     </div>
 </section>
