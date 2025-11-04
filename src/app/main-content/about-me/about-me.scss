@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 section {
-    padding-right: 128px;
+    padding: 0 64px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -9,7 +9,7 @@ section {
     height: 100vh;
 
     >img {
-        width: 65%;
+        width: 50%;
         aspect-ratio: 1.5 / 1;
     }
 
