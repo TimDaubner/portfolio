@@ -28,7 +28,7 @@ export class MyProjects {
     name: "Jump Quest",
     image: "assets/imgs/my-projects/jumpquest_project.png",
     skills: ["JavaScript", "HTML", "CSS"],
-    description: "Loremp Ipsum"
+    description: "Jump Quest is a 2D browser platformer developed with JavaScript. The project demonstrates real-time image rendering, physics-driven motion, and gameplay logic, creating a fully playable and visually engaging experience directly in the browser."
   },
 ];
 }
