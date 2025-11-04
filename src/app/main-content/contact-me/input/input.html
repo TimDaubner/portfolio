@@ -10,7 +10,7 @@
     </div>
     <div class="checkbox">
         <input type="checkbox" [(ngModel)]="contactData.privacy" name="privacy" id="privacy" required>
-        <span>I've read the privacy policy and agree to the processing of my data as outlined</span>
+        <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined</span>
     </div>
     <div class="submit_btn">
         <input type="submit" value="Send" [disabled]="!contactForm.valid">

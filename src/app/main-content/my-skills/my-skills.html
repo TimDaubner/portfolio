@@ -2,10 +2,21 @@
     <h2>My Skills</h2>
     <div class="frame_skill">
         @for (skill of skills; track $index; let index = $index) {
+        @if(index == skills.length - 1){
+        <div class="skill hover">
+            <div>
+                <img src="{{skill.image}}" alt="">
+                <h4>{{skill.name}}</h4>
+            </div>
+            <p></p>
+        </div>
+        }
+        @else {
         <div class="skill">
             <img src="{{skill.image}}" alt="">
             <h4>{{skill.name}}</h4>
         </div>
+        }
         }
     </div>
 </section>

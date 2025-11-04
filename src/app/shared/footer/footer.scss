@@ -72,14 +72,12 @@ footer{
     }
 }
 
-.links-frame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 64px;
-    gap: 16px;
-    >button{
-        background-color: transparent;
-        border: none;
+.links-center{
+    a{
+        color: $color-darkorange;
+        transition:all 175ms ease-in-out;
     }
+  a:hover{
+    color: $color-torquiose;
+  }
 }

@@ -59,7 +59,10 @@
     align-items: center;
     color: $color-torquiose;
 
-
+    a{
+        cursor: pointer;
+        color: $color-darkorange;
+    }
 
     span {
         flex: 1;
