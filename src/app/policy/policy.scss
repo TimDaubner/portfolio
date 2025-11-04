@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+section{
+    padding: 0 64px;
+    padding-top: 160px;
+    color: $color-torquiose;
+    font-size: 16px;
+}
+
+h2,h3,h4,b{
+    color: $color-darkorange;
+}
+
+h2{
+    font-size: 54px;
+}
+
+h3{
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p{
+    margin: 0;
+    margin-bottom: 32px;
+}
