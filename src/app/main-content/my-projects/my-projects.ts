@@ -16,13 +16,13 @@ export class MyProjects {
     name: "Join",
     image: "assets/imgs/my-projects/join_project.png",
     skills: ["Angular", "Typescript", "HTML", "CSS", "Firebase"],
-    description: "Loremp Ipsum"
+    description: "It’s a Kanban-style application designed to manage projects and streamline task completion."
   },
   {
     name: "Pokemon",
     image: "assets/imgs/my-projects/pokedex_project.png",
-    skills: [""],
-    description: "Loremp Ipsum"
+    skills: ["JavaScript", "HTML", "CSS"],
+    description: "A Pokédex application integrated with a third-party API, allowing users to explore all Pokémon along with their stats and additional details."
   },
   {
     name: "Jump Quest",
