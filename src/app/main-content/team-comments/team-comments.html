@@ -1,12 +1,12 @@
 <section id="team-comments">
-    <h4>Need a teamplayer? Here what my colleagues said about me</h4>
+    <h4>{{'team-comments.titel' | translate}}</h4>
     <div class="frame">
         <img src="assets/imgs/team-comments/arrow.svg" alt="">
         @for (colleague of colleagues; track $index) {
             <div class="comment-frame">
                 <h4>{{colleague.name}}</h4>
                 <h5>{{colleague.project_name}}</h5>
-                <p>{{colleague.comment}}</p>
+                <p>{{colleague.comment | translate}}</p>
             </div>
         }
     </div>

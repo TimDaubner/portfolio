@@ -39,33 +39,24 @@
 .hover {
     display: flex;
     flex-direction: row;
-
+    
     div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    
     p {
-        position: relative;
-        display: inline-block;
-    }
-
-    p::after {
-        content: "I'm always happy to learn new technologies, just tell me what you need.";
+        display: none;
         position: absolute;
-        top: 0;
         left: 100%;
-        transform: translate(0px,-65px);
-        opacity: 0;
         color: $color-torquiose;
-        transition: opacity 175ms ease, transform 175ms ease;
-        width: 250px;
+        width: 50%;
     }
-
-    &:hover p::after {
-        transform: translate(75px,-65px);
+    
+    &:hover p{
+        display: inline-block;
         opacity: 1;
     }
 }

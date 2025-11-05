@@ -57,7 +57,7 @@ export class MySkills {
         image: "assets/imgs/my-skills/materialdesign_icon.svg",
       },
       {
-        name: "Challenge me",
+        name: "why-me.graphic-fifth",
         image: "assets/imgs/my-skills/challengeme_icon.svg",
       },
     ]

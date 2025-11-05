@@ -1,5 +1,5 @@
 <section id="my-projects">
-    <h2>My Projects</h2>
+    <h2>{{'my-projects.titel' | translate}}</h2>
     @for (project of projects; track $index; let index = $index) {
     <div class="project-frame">
         @if(index % 2 == 0){
@@ -9,31 +9,31 @@
             <h3>{{project.name}}</h3>
             <div class="infos">
                 @for (skill of project.skills; track $index; let index = $index) {
-                    <h4>{{skill}}</h4>
-                    @if (index != project.skills.length - 1) {
-                        <h4 class="line"> | </h4>
-                    }
+                <h4>{{skill}}</h4>
+                @if (index != project.skills.length - 1) {
+                <h4 class="line"> | </h4>
+                }
                 }
             </div>
-            <p>{{project.description}}</p>
+            <p>{{project.description | translate}}</p>
             <div class="btns">
                 <a href="" class="git-btn">GitHub</a>
                 <a href="" class="live-btn">Live Test</a>
             </div>
         </div>
-    }
-    @else {
+        }
+        @else {
         <div class="project-info">
             <h3>{{project.name}}</h3>
             <div class="infos">
                 @for (skill of project.skills; track $index; let index = $index) {
-                    <h4>{{skill}}</h4>
-                    @if (index != project.skills.length - 1) {
-                        <h4 class="line"> | </h4>
-                    }
+                <h4>{{skill}}</h4>
+                @if (index != project.skills.length - 1) {
+                <h4 class="line"> | </h4>
+                }
                 }
             </div>
-            <p>{{project.description}}</p>
+            <p>{{project.description| translate}}</p>
             <div class="btns">
                 <a href="" class="git-btn">GitHub</a>
                 <a href="" class="live-btn">Live Test</a>

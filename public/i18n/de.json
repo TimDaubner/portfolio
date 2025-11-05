@@ -1,5 +1,77 @@
 {
-     "demo":{
-        "title": "Warum ich"
+    "header": {
+        "first": "Warum ich",
+        "second": "Fähigkeiten",
+        "third": "Projekte",
+        "fourth": "Kontakt"
+    },
+    "aot": {
+        "button": "KONTAKTIERE MICH",
+        "dev": "FRONTEND-ENTWICKLER",
+        "name": "Tim Daubner"
+    },
+    "why-me": {
+        "titel": "Warum ich",
+        "description": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit Kenntnissen in JavaScript, HTML, CSS und Angular sowie Erfahrung im Umgang mit APIs und C# Unity. Ich liebe die Kreativität beim Programmieren – Ideen in interaktive Erlebnisse zu verwandeln und komplexe Rätsel durch Logik und Design zu lösen. Stets neugierig auf neue Technologien, treibt mich der Wunsch nach kontinuierlichem Wachstum, Problemlösung und der Entwicklung sauberer, effizienter und ansprechender Anwendungen an.",
+        "graphic-first": "Ich bin",
+        "graphic-second": "ortsansässig in Ulm",
+        "graphic-third": "offen für Remote-Arbeit",
+        "graphic-fourth": "bereit Umzuziehen",
+        "graphic-fifth": "Schreib mir"
+    },
+    "my-skills": {
+        "titel": "Meine Fähigkeiten",
+        "challenge-me": "Gib mir eine Herausforderung",
+        "cm-extra": "Ich lerne immer gerne neue Technologien – sag mir einfach, was du brauchst."
+    },
+    "my-projects": {
+        "titel": "Projekte",
+        "join": {
+            "description": "Es handelt sich um eine Kanban-ähnliche Anwendung, die entwickelt wurde, um Projekte zu verwalten und die Aufgabenbearbeitung zu optimieren."
+        },
+        "pokedex": {
+            "description": "Eine Pokédex-App mit Drittanbieter-API, die es ermöglicht, alle Pokémon samt Statistiken und Zusatzinformationen zu entdecken."
+        },
+        "jumpquest": {
+            "description": "Jump Quest ist ein 2D-Browser-Platformer in JavaScript, der Echtzeit-Rendering, physikbasierte Bewegungen und Gameplay-Logik kombiniert, um ein spielbares und visuell fesselndes Browser-Erlebnis zu bieten."
+        }
+    },
+    "team-comments": {
+        "titel": "Auf der Suche nach einem Teamplayer? So beschreiben mich meine Kollegen.",
+        "first": "„Tim musste Inhalte gemeinsam mit den Teammitgliedern entwickeln, aufbereiten und bereitstellen. Er ist eine zuverlässige und freundliche Person.“",
+        "second": "„ Er ist eine zuverlässige und freundliche Person, arbeitet strukturiert und schreibt klaren Code. Ich kann ihn als Kollegen empfehlen.“",
+        "third": "„Er ist ein zuverlässiger Teamplayer, der auch unter Zeitdruck gute Leistungen erbringt. Arbeitet strukturiert und schreibt sauberen Code.“"
+    },
+    "contact-me": {
+        "titel": "Kontaktiere mich",
+        "description": "Ich freue mich immer darauf, mit anderen in Kontakt zu treten und neue Möglichkeiten im Frontend-Development zu erkunden. Besonders interessiert mich die Entwicklung von responsiven, benutzerfreundlichen Interfaces mit Angular, HTML, CSS und JavaScript. Wenn Sie an einem Projekt arbeiten, das einen leidenschaftlichen Frontend-Entwickler benötigt, würde ich mich freuen, einen Beitrag leisten zu können!",
+        "policy": "Ich habe die <a href=policy>Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+    },
+    "footer": {
+        "titel": "Frontend-Entwickler",
+        "imprint": "Imprint",
+        "policy": "Datenschutzerklärung"
+    },
+    "imprint": {
+        "titel": "Imprint",
+        "board": "Vorstandsvorstellung",
+        "terms": "Zustimmung der Bedingungen",
+        "terms-p": "Durch den Zugriff auf und die Nutzung <b>Portfolio</b> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Vorgaben oder Änderungen an, die Ihnen von Zeit zu Zeit präsentiert werden können. Wir, die aufgeführten Studierenden, können die Bedingungen jederzeit aktualisieren oder ändern, ohne dies vorher anzukündigen.",
+        "owner": "Produktumfang und Eigentum",
+        "owner-p": "<b>Portfolio</b> wurde im Rahmen eines studentischen Gruppenprojekts in einem Web-Development-Bootcamp an der <b>Developer Akademie GmbH</b> entwickelt. Es dient Bildungszwecken und ist nicht für umfangreiche private oder geschäftliche Nutzung gedacht. Daher können wir keine gleichbleibende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte dieses Produkts garantieren.",
+        "owner-p-second": "Das Design von <b>Portfolio</b> ist Eigentum der <b>Developer Akademie GmbH</b>. Unbefugte Nutzung, Vervielfältigung, Veränderung, Verbreitung oder Replikation des Designs ist strengstens untersagt.",
+        "rights": "Urheberrechte und Eigentumsrechte",
+        "rights-p": "Abgesehen vom Design, das im Eigentum der <b>Developer Akademie GmbH</b> steht, behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an <b>Portfolio</b>, einschließlich aller zugehörigen urheberrechtlich geschützten Materialien, Marken und sonstigen proprietären Informationen.",
+        "use": "Benutzung des Produktes",
+        "use-p": "<b>Portfolio</b> darf nur für rechtmäßige Zwecke in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung von <b>Portfolio</b> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <b>Portfolio</b>.",
+        "limit": "Haftungsausschluss und Begrenzung der Haftung",
+        "limit-p": "<b>Portfolio</b> wird ohne jegliche Gewährleistung bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. Unter keinen Umständen haften wir, die aufgeführten Studierenden, oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folgeschäden oder beispielhafte Schäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangenen Gewinn, Goodwill, Nutzung, Daten oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die aus der Nutzung oder Leistung von <b>Portfolio</b> entstehen.",
+        "indemity": "Freistellung",
+        "indemity-p": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Agenten und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung von <b>Portfolio</b> und/oder Ihrem Verstoß gegen dieses Impressum ergeben. <br>Für Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Kontakt-E-Mail].<br>Datum: 26. Juli 2025"
+    },
+    "policy": {
+        "titel": "Datenschutzerklärung",
+        "update": "letztes Update: 04 November, 2025",
+        "description": "Diese Datenschutzerklärung beschreibt unsere Richtlinien und Verfahren zur Erhebung, Nutzung und Offenlegung Ihrer Informationen, wenn Sie den Service nutzen, und informiert Sie über Ihre Datenschutzrechte sowie darüber, wie Sie durch das Gesetz geschützt werden."
     }
 }
