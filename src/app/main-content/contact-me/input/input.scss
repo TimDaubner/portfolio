@@ -60,7 +60,9 @@
     font-size: 14px;
     align-items: center;
     color: $color-torquiose;
-
+    >input{
+        cursor: pointer;
+    }
     span {
         flex: 1;
         >a {
@@ -74,15 +76,14 @@ input {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid $color-darkorange; // Replace with your dark orange color
+    border: 2px solid $color-darkorange; 
     border-radius: 4px;
     background-color: transparent;
-    cursor: pointer;
     position: relative;
     transition: all 0.2s;
     color: $color-darkorange;
     padding: 9px;
-
+    
     &:checked {
         background-color: $color-torquiose;
         border-color: $color-darkorange;
