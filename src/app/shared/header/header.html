@@ -2,16 +2,18 @@
     <div class="frame_nav">
         <a href="/"><img src="/assets/imgs/td_logo.png" alt="logo"></a>
         <nav>
-            <a href="#about-me">Why me</a>
+            <a href="#about-me">{{'demo.title' | translate}}</a>
             <a href="#my-skills">Skills</a>
             <a href="#my-projects">Projects</a>
             <a href="#contact-me">Contact</a>
         </nav>
     </div>
     <div class="frame_lang">
-        <button class="de_btn">DE</button>|
-        <button class="en_btn">EN</button>
+        <button (click)="useLanguage('de')" class="de_btn">DE</button>|
+        <button (click)="useLanguage('en')" class="en_btn">EN</button>
     </div>
 </header>
 <div class="background"></div>
 <div class="background-transparent"></div>
+
+<!-- Why me -->

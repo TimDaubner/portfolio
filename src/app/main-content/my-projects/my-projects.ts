@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-projects',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './my-projects.html',
   styleUrl: './my-projects.scss'
 })
 export class MyProjects {
+  private translate = inject(TranslateService);
+  
   projects: {
     name: string,
     image: string,

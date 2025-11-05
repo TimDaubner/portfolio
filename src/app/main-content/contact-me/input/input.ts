@@ -1,15 +1,18 @@
 import { NgClass, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
-  imports: [FormsModule, NgStyle,NgClass],
+  imports: [FormsModule, NgStyle,NgClass,TranslatePipe],
   standalone: true,
   templateUrl: './input.html',
   styleUrl: './input.scss'
 })
 export class Input {
+  private translate = inject(TranslateService);
+
   contactData: {
     name: string,
     email: string,

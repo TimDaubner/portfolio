@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team-comments',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './team-comments.scss'
 })
 export class TeamComments {
+  private translate = inject(TranslateService);
+
   colleagues: {
     name: string,
     project_name: string,
