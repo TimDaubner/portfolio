@@ -1,8 +1,8 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, inject, provideAppInitializer} from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, inject, provideAppInitializer } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import {provideHttpClient} from "@angular/common/http";
-import {provideTranslateService, TranslateService} from "@ngx-translate/core";
-import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
+import { provideHttpClient } from "@angular/common/http";
+import { provideTranslateService, TranslateService } from "@ngx-translate/core";
+import { provideTranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { routes } from './app.routes';
 
@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-     provideHttpClient(),
+    provideHttpClient(),
     provideTranslateService({
       lang: 'en',
       fallbackLang: 'en',
@@ -20,9 +20,9 @@ export const appConfig: ApplicationConfig = {
         suffix: '.json'
       })
     }),
-     provideAppInitializer(() => {
-       const  translate = inject(TranslateService);
-       translate.use(translate.getBrowserLang() || "en");
-     })
+    provideAppInitializer(() => {
+      const translate = inject(TranslateService);
+      translate.use(translate.getBrowserLang() || "en");
+    })
   ]
 };

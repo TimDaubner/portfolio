@@ -5,11 +5,11 @@ import { MySkills } from './my-skills/my-skills';
 import { MyProjects } from './my-projects/my-projects';
 import { TeamComments } from './team-comments/team-comments';
 import { ContactMe } from './contact-me/contact-me';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-content',
-  imports: [Aot, AboutMe, MySkills, MyProjects, TeamComments, ContactMe,TranslatePipe],
+  imports: [Aot, AboutMe, MySkills, MyProjects, TeamComments, ContactMe],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss'
 })
