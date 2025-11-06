@@ -1,24 +1,25 @@
 <section id="contact-me">
     <div class="header">
-        <h2>{{'contact-me.titel' | translate}}</h2><img src="assets/imgs/contact-me/arrow.svg" alt="">
+        <h2>{{'contact-me.titel' | translate}}</h2><img class="normal" src="assets/imgs/contact-me/arrow.svg" alt="">
     </div>
-    <div class="frame-contact-me">
+    <div class="frame-contact-me normal">
         <div>
             <p>{{'contact-me.description' | translate}}</p>
             <div class="colum">
-                    <div (mouseenter)="toggleImg('mail_img','assets/imgs/contact-me/mail-hover.svg')"
+                <div (mouseenter)="toggleImg('mail_img','assets/imgs/contact-me/mail-hover.svg')"
                     (mouseleave)="toggleImg('mail_img','assets/imgs/contact-me/mail.svg')">
                     <a href="mailto:tim.daubner@outlook.com">
-                        <img src="assets/imgs/contact-me/mail.svg" alt="" [src]="mail_img">E-mail: tim.daubner@outlook.com
+                        <img src="assets/imgs/contact-me/mail.svg" alt="" [src]="mail_img">E-mail:
+                        tim.daubner@outlook.com
                     </a>
                 </div>
                 <div (mouseenter)="toggleImg('phone_img','assets/imgs/contact-me/phone-hover.svg')"
-                (mouseleave)="toggleImg('phone_img','assets/imgs/contact-me/phone.svg')">
-                <a href="tel:015110491649">
-                    <img src="assets/imgs/contact-me/phone.svg" alt="" [src]="phone_img">Tel: 0151 104916 49
-                </a>
+                    (mouseleave)="toggleImg('phone_img','assets/imgs/contact-me/phone.svg')">
+                    <a href="tel:015110491649">
+                        <img src="assets/imgs/contact-me/phone.svg" alt="" [src]="phone_img">Tel: 0151 104916 49
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
         <a href="#aot" class="arrow_up_frame">
             <img (mouseenter)="toggleImg('arrow_img','assets/imgs/contact-me/arrowup-hover.svg')"
@@ -26,5 +27,28 @@
                 src="assets/imgs/contact-me/arrowup.svg" alt="" [src]="arrow_img">
         </a>
     </div>
-        <app-input/>
+    <div class="frame-contact-me responsive">
+        <p>{{'contact-me.description' | translate}}</p>
+    </div>
+    <!-- <app-input /> -->
+    <div class="column-extra">
+        <a href="#aot" class="arrow_up_frame">
+            <img (mouseenter)="toggleImg('arrow_img','assets/imgs/contact-me/arrowup-hover.svg')"
+            (mouseleave)="toggleImg('arrow_img','assets/imgs/contact-me/arrowup.svg')"
+            src="assets/imgs/contact-me/arrowup.svg" alt="" [src]="arrow_img">
+        </a>
+        <div class="link" (mouseenter)="toggleImg('mail_img','assets/imgs/contact-me/mail-hover.svg')"
+            (mouseleave)="toggleImg('mail_img','assets/imgs/contact-me/mail.svg')">
+            <a href="mailto:tim.daubner@outlook.com">
+                <img src="assets/imgs/contact-me/mail.svg" alt="" [src]="mail_img">E-mail:
+                tim.daubner@outlook.com
+            </a>
+        </div>
+        <div (mouseenter)="toggleImg('phone_img','assets/imgs/contact-me/phone-hover.svg')"
+            (mouseleave)="toggleImg('phone_img','assets/imgs/contact-me/phone.svg')">
+            <a href="tel:015110491649">
+                <img src="assets/imgs/contact-me/phone.svg" alt="" [src]="phone_img">Tel: 0151 104916 49
+            </a>
+        </div>
+    </div>
 </section>
