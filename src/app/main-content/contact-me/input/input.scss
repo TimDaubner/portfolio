@@ -182,3 +182,54 @@ input:-webkit-autofill:active {
 .placeholder-success::placeholder {
     color: limegreen;
 }
+
+@media(max-width:1400px){
+    form{
+        display: flex;
+        flex-direction: column;
+        >.frame-input{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            >.info-data{
+                >input{
+                    width: 300px;
+                    min-width: 200px;
+                }
+            }
+            >textarea{
+                width: 300px;
+            }
+        }
+    }
+    .submit_btn{
+        margin-top: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media(max-width:900px){
+    .checkbox{
+        input{
+            margin-left: 24px;
+        }
+        span{
+            margin-right: 24px;
+        }
+    }
+}
+
+@media(max-width:400px){
+    form{
+        >.frame-input{
+            >.info-data{
+                >input{
+                    width: 200px;
+                }
+            }
+            >textarea{
+                width: 200px;
+            }
+        }
+    }
+}

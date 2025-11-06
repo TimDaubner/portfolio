@@ -15,6 +15,14 @@ section {
     }
 }
 
+.column-extra{
+    div{
+        a{
+            color: $color-torquiose;
+        }
+    }
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -124,6 +132,7 @@ section {
             justify-content: flex-end;
             align-items: flex-end;
             width: 100%;
+                margin-right: 24px;
         }
 
         >a {
