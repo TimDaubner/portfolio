@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
+import { DragulaService } from 'ng2-dragula';
 
 @Component({
   selector: 'app-team-comments',

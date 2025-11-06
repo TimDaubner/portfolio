@@ -102,3 +102,61 @@ section {
     }
 
 }
+
+@media(max-width:1400px){
+    section{
+        padding-top: 350px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        >img{
+            width: 100%;
+        }
+        >.aot_infos{
+            z-index: 100;
+        }
+        .aot_infos{
+            align-items: center;
+            >.frame_contact_btn{
+                display: none;
+            }
+            >.arrow_frame{
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    .aot_frame{
+        width: 100%;
+    }
+    section{
+        padding-left: 0;
+        padding-top:125px;
+    }
+    .aot_infos{
+        h1{
+            font-size: 52px !important;
+            text-align: center !important;
+        }
+        h2{
+            font-size: 34px !important;
+            text-align: center !important;
+        }
+    }
+}
+
+@media(max-width:450px){
+    section{
+        padding-top:0px !important;
+    }
+    .aot_infos{
+        h1{
+            font-size: 36px !important;
+        }
+        h2{
+            font-size: 18px !important;
+        }
+    }
+}

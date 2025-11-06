@@ -1,7 +1,7 @@
 <section id="team-comments">
     <h4>{{'team-comments.titel' | translate}}</h4>
-    <div class="frame">
-        <img src="assets/imgs/team-comments/arrow.svg" alt="">
+    <div [dragula]="'FEED'" class="frame">
+        <img class="normal" src="assets/imgs/team-comments/arrow.svg" alt="">
         @for (colleague of colleagues; track $index) {
             <div class="comment-frame">
                 <h4>{{colleague.name}}</h4>

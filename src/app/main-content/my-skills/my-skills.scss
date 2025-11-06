@@ -17,7 +17,6 @@
     grid-template-columns: auto auto auto auto auto auto;
     align-items: center;
     gap: 24px;
-    margin-left: -100px;
 
     h4 {
         color: $color-torquiose;
@@ -30,6 +29,7 @@
     justify-content: center;
     align-items: center;
     transition: all 175ms ease-in-out;
+    max-width: 150px;
 
     &:hover {
         transform: scale(1.05);
@@ -39,23 +39,23 @@
 .hover {
     display: flex;
     flex-direction: row;
-    
+
     div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     p {
         display: none;
         position: absolute;
-        left: 100%;
+        left: 200%;
         color: $color-torquiose;
-        width: 50%;
+        width: 90%;
     }
-    
-    &:hover p{
+
+    &:hover p {
         display: inline-block;
         opacity: 1;
     }
@@ -64,3 +64,107 @@
 .frame {
     display: flex;
 }
+
+@media(max-width:1400px) {
+    .frame_skill {
+        margin-left: 0;
+    }
+
+    .frame_my_skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 24px;
+
+        >.frame_skill {
+            gap: 68px;
+        }
+    }
+
+    .hover {
+        >p {
+            left: 120% !important;
+        }
+    }
+}
+
+@media(max-width:1400px) {
+    .frame_skill {
+        gap: 34px !important;
+    }
+    
+    .skill {
+        >img {
+            width: 50px;
+            aspect-ratio: 1/1;
+        }
+        
+        >h4 {
+            font-size: 16px;
+        }
+    }
+    
+    .hover {
+        div {
+            >img {
+                width: 50px;
+                aspect-ratio: 1/1;
+            }
+            
+            >h4 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:900px) {
+    .frame_my_skills{
+        >h2{
+            font-size: 38px;
+        }
+    }
+    .frame_skill {
+        grid-template-columns: auto auto auto ;
+    }
+}
+
+@media(max-width:570px) {
+    .frame_skill {
+        gap: 24px !important;
+    }
+    .frame_my_skills{
+        >h2{
+            font-size: 24px;
+        }
+    }
+    .hover {
+        >p {
+            left: 110% !important;
+        }
+    }
+}
+
+@media(max-width:420px) {
+    .frame_my_skills{
+        >h2{
+            font-size: 18px;
+        }
+    }
+    
+    .frame_skill {
+        grid-template-columns: auto auto ;
+        >h4{
+            font-size: 16px;
+        }
+    }
+    .hover {
+        >p {
+            left: 100% !important;
+        }
+    }
+
+}
+

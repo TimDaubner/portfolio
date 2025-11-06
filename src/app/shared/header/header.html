@@ -7,13 +7,27 @@
             <a href="#my-projects">{{'header.third' | translate}}</a>
             <a href="#contact-me">{{'header.fourth' | translate}}</a>
         </nav>
+
+    </div>
+    <nav class="burger_menu" [ngClass]="{'d_none' : isMenuHidden}">
+        <a href="#about-me">{{'header.first' | translate}}</a>
+        <a href="#my-skills">{{'header.second' | translate}}</a>
+        <a href="#my-projects">{{'header.third' | translate}}</a>
+        <a href="#contact-me">{{'header.fourth' | translate}}</a>
+        <div class="frame_lang_burger">
+            <button (click)="useLanguage('de')" class="de_btn">DE</button>|
+            <button (click)="useLanguage('en')" class="en_btn">EN</button>
+        </div>
+    </nav>
+    <div class="burger">
+        <img (click)="toggleMenu()" [src]="menu_img">
     </div>
     <div class="frame_lang">
         <button (click)="useLanguage('de')" class="de_btn">DE</button>|
         <button (click)="useLanguage('en')" class="en_btn">EN</button>
     </div>
 </header>
-<div class="background"></div>
-<div class="background-transparent"></div>
+<div class="background" [ngClass]="{'background' : isMenuHidden}"></div>
+<div class="background-transparent" [ngClass]="{'background-transparent' : isMenuHidden}"></div>
 
 <!-- Why me -->

@@ -3,22 +3,24 @@
     @for (project of projects; track $index; let index = $index) {
     <div class="project-frame">
         @if(index % 2 == 0){
-        <img src="{{project.image}}" alt="">
-
-        <div class="project-info">
-            <h3>{{project.name}}</h3>
-            <div class="infos">
-                @for (skill of project.skills; track $index; let index = $index) {
-                <h4>{{skill}}</h4>
-                @if (index != project.skills.length - 1) {
-                <h4 class="line"> | </h4>
-                }
-                }
-            </div>
-            <p>{{project.description | translate}}</p>
-            <div class="btns">
-                <a href="{{project.url}}" target="_blank" class="git-btn">GitHub</a>
-                <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
+        <div class="extra">
+            <img class="normal" src="{{project.image}}" alt="">
+            <div class="project-info">
+                <h3>{{project.name}}</h3>
+                <div class="infos">
+                    @for (skill of project.skills; track $index; let index = $index) {
+                        <h4>{{skill}}</h4>
+                        @if (index != project.skills.length - 1) {
+                            <h4 class="line"> | </h4>
+                        }
+                    }
+                </div>
+                <p>{{project.description | translate}}</p>
+                <img class="responsive" src="{{project.image}}" alt="">
+                <div class="btns">
+                    <a href="{{project.url}}" target="_blank" class="git-btn">GitHub</a>
+                    <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
+                </div>
             </div>
         </div>
         }
@@ -34,13 +36,13 @@
                 }
             </div>
             <p>{{project.description| translate}}</p>
+            <img class="responsive" src="{{project.image}}" alt="">
             <div class="btns">
                 <a href="{{project.url}}" target="_blank" class="git-btn">GitHub</a>
                 <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
             </div>
         </div>
-
-        <img src="{{project.image}}" alt="">
+            <img class="normal" src="{{project.image}}" alt="">
         }
     </div>
     }

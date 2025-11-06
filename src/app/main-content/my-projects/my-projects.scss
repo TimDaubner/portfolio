@@ -1,33 +1,50 @@
 @use 'variables' as *;
 
-section{
+section {
     padding: 0 64px;
-    h2{
+
+    h2 {
         color: $color-darkorange;
         text-align: center;
         font-size: 54px;
         padding-top: 150px;
     }
-    h3{
+
+    h3 {
         color: $color-torquiose;
         font-size: 48px;
         font-weight: 700;
         margin: 0;
     }
-    h4{
+
+    h4 {
         color: $color-torquiose;
     }
-    p{
+
+    p {
         color: $color-torquiose;
         margin-bottom: 64px;
         width: 75%;
     }
-    img{
+
+    img {
         width: 50%;
     }
 }
 
-.project-frame{
+.normal {
+    display: flex;
+}
+
+.responsive {
+    display: none;
+}
+
+.extra {
+    display: flex;
+}
+
+.project-frame {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,44 +52,91 @@ section{
     margin-bottom: 120px;
 }
 
-.project-info{
+.project-info {
     display: flex;
     flex-direction: column;
     margin: 0 64px;
 
-    .infos{
+    .infos {
         display: flex;
         flex-direction: row;
     }
-    .btns{
+
+    .btns {
         display: flex;
         flex-direction: row;
     }
 }
 
-.git-btn{
+.git-btn {
     border: 2px solid $color-torquiose;
     padding: 8px 16px;
     color: $color-darkorange;
     transition: all 175ms ease-in-out;
     margin-right: 24px;
-    &:hover{
+
+    &:hover {
         color: $color-torquiose;
     }
 }
 
-.live-btn{
-     border: 2px solid $color-torquiose;
-     padding: 8px 16px;
-     color: $color-darkblue;
-     background-color: $color-torquiose;
-     transition: all 175ms ease-in-out;
-     &:hover{
-         color: $color-darkorange;
-        }
-    }
+.live-btn {
+    border: 2px solid $color-torquiose;
+    padding: 8px 16px;
+    color: $color-darkblue;
+    background-color: $color-torquiose;
+    transition: all 175ms ease-in-out;
 
-.line{
+    &:hover {
+        color: $color-darkorange;
+    }
+}
+
+.line {
     margin-left: 8px;
     margin-right: 8px;
+}
+
+@media(max-width:1400px) {
+    .normal {
+        display: none;
+    }
+    
+    .responsive {
+        display: flex;
+        margin-bottom: 24px;
+    }
+    
+    .project-frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .extra {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .project-info {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media(max-width:1400px) {
+section{
+    padding: 0;
+}
+.project-info{
+    margin: 0;
+}
+
+.infos{
+    flex-wrap: wrap;
+}
 }
