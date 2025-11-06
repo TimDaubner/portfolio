@@ -15,6 +15,14 @@ footer{
     margin-bottom: 64px;
 }
 
+@media(min-width(1980px)){
+    footer{
+        width: 100%;
+        gap:1000px;
+    }
+
+}
+
 .logo-frame{
     display: flex;
     flex-direction: column;
@@ -48,9 +56,10 @@ footer{
     justify-content: center;
     margin-top: 64px;
     gap: 16px;
-    >button{
+    >a{
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 }
 

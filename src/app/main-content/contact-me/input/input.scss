@@ -1,5 +1,15 @@
 @use 'variables' as *;
 
+form {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .frame-input {
     width: 100%;
     display: flex;
@@ -60,11 +70,14 @@
     font-size: 14px;
     align-items: center;
     color: $color-torquiose;
-    >input{
+
+    >input {
         cursor: pointer;
     }
+
     span {
         flex: 1;
+
         >a {
             cursor: pointer;
             color: $color-darkorange;
@@ -76,14 +89,14 @@ input {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid $color-darkorange; 
+    border: 2px solid $color-darkorange;
     border-radius: 4px;
     background-color: transparent;
     position: relative;
     transition: all 0.2s;
     color: $color-darkorange;
     padding: 9px;
-    
+
     &:checked {
         background-color: $color-torquiose;
         border-color: $color-darkorange;

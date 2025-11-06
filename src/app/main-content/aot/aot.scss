@@ -60,6 +60,14 @@ section {
     }
 }
 
+@media(max-width:1800px){
+    section{
+        >.aot_infos {
+            gap: 10px;
+        }
+    }
+}
+
 .aot_frame {
     background-color: $color-darkblue;
     width: 90%;

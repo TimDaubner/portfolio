@@ -10,8 +10,17 @@
         </div>
     </div>
     <div class="links-frame">
-        <button class="git_btn"><img src="assets/imgs/footer/git.svg" alt=""></button>
-        <button class="mail_btn"><img src="assets/imgs/footer/mail.svg" alt=""></button>
-        <button class="linked_btn"><img src="assets/imgs/footer/linkedin.svg" alt=""></button>
+
+        <a href="https://github.com/TimDaubner" target="_blank" class="git_btn" (mouseenter)="toggleImg('git_img','assets/imgs/footer/git-hover.svg')"
+            (mouseleave)="toggleImg('git_img','assets/imgs/footer/git.svg')"><img src="assets/imgs/footer/git.svg"
+                alt="" [src]="git_img"></a>
+
+        <a href="mailto:tim.daubner@outlook.com" class="mail_btn" (mouseenter)="toggleImg('mail_img','assets/imgs/footer/mail-hover.svg')"
+            (mouseleave)="toggleImg('mail_img','assets/imgs/footer/mail.svg')"><img src="assets/imgs/footer/mail.svg"
+                alt="" [src]="mail_img"></a>
+
+        <a href="https://www.linkedin.com/in/tim-daubner-847b47272/?originalSubdomain=de" target="_blank" class="linked_btn" (mouseenter)="toggleImg('linkedin_img','assets/imgs/footer/linkedin-hover.svg')"
+            (mouseleave)="toggleImg('linkedin_img','assets/imgs/footer/linkedin.svg')"><img
+                src="assets/imgs/footer/linkedin.svg" alt="" [src]="linkedin_img"></a>
     </div>
 </footer>

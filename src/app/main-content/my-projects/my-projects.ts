@@ -15,23 +15,31 @@ export class MyProjects {
     image: string,
     skills: string[],
     description: string,
+    url: string,
+    live_url: string
   }[] = [{
     name: "Join",
     image: "assets/imgs/my-projects/join_project.png",
     skills: ["Angular", "Typescript", "HTML", "CSS", "Firebase"],
-    description: "my-projects.join.description"
+    description: "my-projects.join.description",
+    url:"",
+    live_url:""
   },
   {
     name: "Pokédex",
     image: "assets/imgs/my-projects/pokedex_project.png",
     skills: ["JavaScript", "HTML", "CSS"],
-    description: "my-projects.pokedex.description"
+    description: "my-projects.pokedex.description",
+    url:"https://github.com/TimDaubner/Pokedex.git",
+    live_url:"http://pokedex.tim-daubner.de/"
   },
   {
     name: "Jump Quest",
     image: "assets/imgs/my-projects/jumpquest_project.png",
     skills: ["JavaScript", "HTML", "CSS"],
-    description: "my-projects.jumpquest.description"
+    description: "my-projects.jumpquest.description",
+    url:"https://github.com/TimDaubner/JumpQuest.git",
+    live_url:"http://jumpquest.tim-daubner.de/"
   },
 ];
 }
