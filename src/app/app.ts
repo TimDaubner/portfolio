@@ -2,6 +2,8 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./shared/header/header";
 import { Footer } from "./shared/footer/footer";
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -11,4 +13,7 @@ import { Footer } from "./shared/footer/footer";
 })
 export class App {
   protected readonly title = signal('portfolio');
+  constructor(){
+    AOS.init();
+  }
 }

@@ -3,16 +3,17 @@
     @for (project of projects; track $index; let index = $index) {
     <div class="project-frame">
         @if(index % 2 == 0){
-        <div class="extra">
+        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+            class="extra">
             <img class="normal" src="{{project.image}}" alt="">
             <div class="project-info">
                 <h3>{{project.name}}</h3>
                 <div class="infos">
                     @for (skill of project.skills; track $index; let index = $index) {
-                        <h4>{{skill}}</h4>
-                        @if (index != project.skills.length - 1) {
-                            <h4 class="line"> | </h4>
-                        }
+                    <h4>{{skill}}</h4>
+                    @if (index != project.skills.length - 1) {
+                    <h4 class="line"> | </h4>
+                    }
                     }
                 </div>
                 <p>{{project.description | translate}}</p>
@@ -25,7 +26,8 @@
         </div>
         }
         @else {
-        <div class="project-info">
+        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+            class="project-info">
             <h3>{{project.name}}</h3>
             <div class="infos">
                 @for (skill of project.skills; track $index; let index = $index) {
@@ -42,7 +44,7 @@
                 <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
             </div>
         </div>
-            <img class="normal" src="{{project.image}}" alt="">
+        <img class="normal" src="{{project.image}}" alt="">
         }
     </div>
     }
