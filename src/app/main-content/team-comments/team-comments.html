@@ -1,6 +1,12 @@
 <section id="team-comments">
     <h4>{{'team-comments.titel' | translate}}</h4>
-    <div [dragula]="'FEED'" class="frame">
+    <div #frameDiv [ngStyle]="frame_bot" draggable="true" (mousedown)="down($event,frameDiv)"
+  (mousemove)="move($event)"
+  (mouseup)="up($event)"
+  (mouseleave)="up($event)"
+  (touchstart)="down($event,frameDiv)"
+  (touchmove)="move($event)"
+  (touchend)="up($event)" class="frame">
         <img class="normal" src="assets/imgs/team-comments/arrow.svg" alt="">
         @for (colleague of colleagues; track $index) {
             <div class="comment-frame">

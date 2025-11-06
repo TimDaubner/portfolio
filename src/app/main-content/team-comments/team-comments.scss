@@ -55,25 +55,25 @@ section {
 
 @media(max-width:900px) {
     .frame {
+        position: relative;
         display: flex;
         gap: 24px;
-        overflow-x: auto; // allow horizontal scroll
-        scroll-behavior: smooth; // smooth dragging / scrolling
-        cursor: grab; // show grab cursor
-        padding-bottom: 16px; // optional padding for scroll
+        overflow-x: auto; 
+        scroll-behavior: smooth; 
+        cursor: grab; 
+        padding-bottom: 16px; 
     }
 
     .frame:active {
         cursor: grabbing;
     }
 
-    /* Remove scrollbar in Webkit browsers for cleaner look */
     .frame::-webkit-scrollbar {
         display: none;
     }
 
     .comment-frame {
-        flex: 0 0 250px; // fixed width for smooth drag
+        flex: 0 0 250px; 
         max-width: 100%;
     }
 }

@@ -1,10 +1,10 @@
+import { NgStyle } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import { DragulaService } from 'ng2-dragula';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team-comments',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, NgStyle],
   templateUrl: './team-comments.html',
   styleUrl: './team-comments.scss'
 })
@@ -32,4 +32,52 @@ export class TeamComments {
         comment: "team-comments.third"
       },
     ]
+
+  isDragging: boolean = false;
+  startX: number = 0;
+  currentX: number = 0;
+  halfWidth: number = 0;
+  frame_bot = {
+    left: '0px',
+    top: '0px',
+    position: 'relative',
+    cursor: 'grab'
+  };
+
+  clamp(value: number, min: number, max: number): number { // ✅ added
+    return Math.min(Math.max(value, min), max); // ✅ added
+  }
+
+  getClientX(e: MouseEvent | TouchEvent){
+    if (e instanceof MouseEvent) {
+      return e.clientX;
+    } else if (e instanceof TouchEvent) {
+      return e.touches[0].clientX;
+    }
+    return 0;
+  }
+
+  down(e: MouseEvent | TouchEvent,frameElement: HTMLElement) {
+    e.preventDefault();
+    this.isDragging = true;
+    this.startX = this.getClientX(e);
+    this.halfWidth = frameElement.offsetWidth / 2;
+    this.frame_bot.cursor = 'grabbing';
+  }
+
+  move(e: MouseEvent | TouchEvent) {
+    if (!this.isDragging) return;
+    e.preventDefault();
+
+    const dx = this.getClientX(e) - this.startX;
+    this.currentX += dx;
+    this.currentX = this.clamp(this.currentX, -this.halfWidth, this.halfWidth);
+    this.frame_bot.left = `${this.currentX}px`;
+    this.startX = this.getClientX(e);
+  }
+
+  up(e: MouseEvent | TouchEvent) {
+    this.isDragging = false;
+    this.frame_bot.cursor = 'grab';
+  }
 }
