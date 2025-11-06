@@ -129,6 +129,12 @@ section {
         >a {
             position: relative;
             height: 50px;
+            >img{
+                &:hover{
+                    padding: 4px;
+                    border: 2px solid $color-torquiose;
+                }
+            }
         }
 
         >div>a {
@@ -144,7 +150,6 @@ section {
             }
         }
     }
-
 }
 
 @media(max-width:900px) {
