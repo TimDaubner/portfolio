@@ -60,8 +60,8 @@ section {
     }
 }
 
-@media(max-width:1800px){
-    section{
+@media(max-width:1800px) {
+    section {
         >.aot_infos {
             gap: 10px;
         }
@@ -103,60 +103,102 @@ section {
 
 }
 
-@media(max-width:1400px){
-    section{
-        padding-top: 350px;
+@media(max-width:1400px) {
+    section {
+        padding-top: 100px;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        >img{
-            width: 100%;
+
+        >img {
+            width: 60%;
         }
-        >.aot_infos{
+
+        >.aot_infos {
             z-index: 100;
         }
-        .aot_infos{
+
+        .aot_infos {
             align-items: center;
-            >.frame_contact_btn{
+
+            >.frame_contact_btn {
                 display: none;
             }
-            >.arrow_frame{
+
+            >.arrow_frame {
                 display: none;
             }
         }
     }
 }
 
-@media(max-width:800px){
-    .aot_frame{
+@media(max-width:1200px) {
+    section {
+        >img {
+            width: 80%;
+        }
+    }
+}
+
+@media(max-width:850px) {
+    section {
+        padding-top: 10px;
+
+        >img {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:800px) {
+    .aot_frame {
         width: 100%;
     }
-    section{
+
+    section {
         padding-left: 0;
-        padding-top:125px;
+        padding-top: 10px;
     }
-    .aot_infos{
-        h1{
-            font-size: 52px !important;
+
+    .aot_infos {
+        h1 {
+            font-size: 76px !important;
             text-align: center !important;
         }
-        h2{
+
+        h2 {
+            font-size: 48px !important;
+            text-align: center !important;
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .aot_infos {
+        h1 {
+            font-size: 62px !important;
+            text-align: center !important;
+        }
+
+        h2 {
             font-size: 34px !important;
             text-align: center !important;
         }
     }
 }
 
-@media(max-width:450px){
-    section{
-        padding-top:0px !important;
+@media(max-width:450px) {
+    section {
+        padding-top: 0px !important;
     }
-    .aot_infos{
-        h1{
-            font-size: 36px !important;
+
+    .aot_infos {
+        h1 {
+            font-size: 40px !important;
         }
-        h2{
-            font-size: 18px !important;
+
+        h2 {
+            font-size: 22px !important;
         }
     }
 }
