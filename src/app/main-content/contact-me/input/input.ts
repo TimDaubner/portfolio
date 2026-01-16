@@ -38,10 +38,10 @@ export class Input {
     'placeholder-default', 'placeholder-default', 'placeholder-default'
   ];
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://tim-daubner.de/api/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -65,7 +65,7 @@ export class Input {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      console.log(this.contactData);
       ngForm.resetForm();
     }
   }
