@@ -217,6 +217,10 @@ input:-webkit-autofill:active {
             margin-right: 24px;
         }
     }
+    .submit_btn{
+        justify-content: center;
+        margin-right:0;
+    }
 }
 
 @media(max-width:400px){

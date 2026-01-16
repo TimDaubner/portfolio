@@ -112,12 +112,9 @@ footer {
         padding: 0;
     }
 
-    .logo-frame {
-        margin-left: 120px;
-    }
-
     .links-frame {
         margin-right: 120px;
+        margin-left: 16px;
     }
 
     .normal {
@@ -126,6 +123,10 @@ footer {
 
     .responsive {
         display: flex;
+    }
+
+    .center-frame {
+        margin-right: 16px;
     }
 }
 
@@ -158,15 +159,8 @@ footer {
 }
 
 @media(max-width:800px) {
-    .logo-frame {
-        margin-left: 16px;
-    }
-
-    .links-frame {
-        margin-right: 16px;
-    }
-
     .center-frame {
+        margin-right: 0;
         >h4 {
             font-size: 18px;
         }
