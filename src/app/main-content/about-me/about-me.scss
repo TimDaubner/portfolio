@@ -70,7 +70,22 @@ section {
         width: 30px;
         gap: 16px;
         align-items: center;
+
+        &:hover {
+            >.gps-hover {
+                opacity: 1;
+            }
+        }
+
+        >.gps-hover {
+            position: relative;
+            left: -44px;
+            top: 25px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
     }
+
 }
 
 .relocate {
@@ -88,6 +103,27 @@ section {
     width: 185px;
     gap: 16px;
     align-items: center;
+
+    &:hover {
+        >.relocate-hover {
+            opacity: 1;
+        }
+        >.luggage{
+            opacity: 0;
+        }
+    }
+    >.luggage{
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
+
+    >.relocate-hover {
+        position: relative;
+        left: -50px;
+        top: 0px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
 }
 
 .remote {
@@ -99,9 +135,23 @@ section {
 
 .work-remote {
     display: flex;
-    width: 185px;
+    width: 200px;
     gap: 16px;
     align-items: center;
+
+    &:hover {
+        >.remote-hover {
+            opacity: 1;
+        }
+    }
+
+    >.remote-hover {
+        position: relative;
+        left: -70px;
+        top: -12px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
 }
 
 .btn-frame {
@@ -212,12 +262,13 @@ section {
 }
 
 @media(max-width:800px) {
-    section{
+    section {
         padding: 0 32px;
         padding-top: 15vh;
     }
+
     .responsive {
-        
+
         >div {
             >img {
                 width: 20%;
@@ -230,6 +281,7 @@ section {
 @media(max-width:460px) {
     section {
         padding-top: 25vh;
+
         >div {
             >h2 {
                 font-size: 38px;
@@ -245,9 +297,10 @@ section {
 
 
 @media(max-width:400px) {
- section {
+    section {
         padding-top: 30vh;
- }
+    }
+
     .responsive {
 
         >div {
