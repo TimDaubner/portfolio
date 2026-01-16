@@ -56,7 +56,6 @@ export class Input {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            //create dialog 
             ngForm.resetForm();
           },
           error: (error) => {
@@ -65,7 +64,6 @@ export class Input {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
       ngForm.resetForm();
     }
   }
