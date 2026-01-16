@@ -39,12 +39,12 @@
             </div>
             <p>{{project.description| translate}}</p>
             <img class="responsive" src="{{project.image}}" alt="">
-            <div class="btns">
-                <a href="{{project.url}}" target="_blank" class="git-btn">GitHub</a>
-                <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
+                <div class="btns">
+                    <a href="{{project.url}}" target="_blank" class="git-btn">GitHub</a>
+                    <a href="{{project.live_url}}" target="_blank" class="live-btn">Live Test</a>
+                </div>
             </div>
-        </div>
-        <img class="normal" src="{{project.image}}" alt="">
+            <img data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" class="normal" src="{{project.image}}" alt="">
         }
     </div>
     }

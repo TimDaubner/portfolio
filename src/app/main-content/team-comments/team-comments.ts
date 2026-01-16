@@ -41,14 +41,14 @@ export class TeamComments {
     left: '0px',
     top: '0px',
     position: 'relative',
-    cursor: 'grab'
+    cursor: 'cursor'
   };
 
   clamp(value: number, min: number, max: number): number { // ✅ added
     return Math.min(Math.max(value, min), max); // ✅ added
   }
 
-  getClientX(e: MouseEvent | TouchEvent){
+  getClientX(e: MouseEvent | TouchEvent) {
     if (e instanceof MouseEvent) {
       return e.clientX;
     } else if (e instanceof TouchEvent) {
@@ -57,7 +57,13 @@ export class TeamComments {
     return 0;
   }
 
-  down(e: MouseEvent | TouchEvent,frameElement: HTMLElement) {
+  isDesktop(): boolean {
+    return window.matchMedia('(max-width: 900px)').matches;
+  }
+
+  down(e: MouseEvent | TouchEvent, frameElement: HTMLElement) {
+    if (!this.isDesktop()) return;
+
     e.preventDefault();
     this.isDragging = true;
     this.startX = this.getClientX(e);
@@ -66,6 +72,7 @@ export class TeamComments {
   }
 
   move(e: MouseEvent | TouchEvent) {
+    if (!this.isDesktop() || !this.isDragging) return;
     if (!this.isDragging) return;
     e.preventDefault();
 
@@ -77,6 +84,7 @@ export class TeamComments {
   }
 
   up(e: MouseEvent | TouchEvent) {
+    if (!this.isDesktop()) return;
     this.isDragging = false;
     this.frame_bot.cursor = 'grab';
   }

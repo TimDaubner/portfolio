@@ -13,7 +13,15 @@ import AOS from 'aos';
 })
 export class App {
   protected readonly title = signal('portfolio');
-  constructor(){
-    AOS.init();
+   ngAfterViewInit(): void {
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    setTimeout(() => {
+      AOS.refreshHard();
+    }, 300);
   }
 }
