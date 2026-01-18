@@ -164,7 +164,7 @@
         "links": "Links zu anderen Websites",
         "links-p": "Unser Service kann Links zu anderen Websites enthalten, die nicht von uns betrieben werden. Wenn Sie auf einen Link eines Drittanbieters klicken, werden Sie auf die Website dieses Drittanbieters weitergeleitet. Wir empfehlen Ihnen dringend, die Datenschutzerklärung jeder Website zu lesen, die Sie besuchen.",
         "links-p-1": "Wir haben keine Kontrolle über und übernehmen keine Verantwortung für den Inhalt, die Datenschutzrichtlinien oder die Praktiken von Websites oder Diensten Dritter.",
-        "links-p-extra":"Wir haben keine Kontrolle über und übernehmen keine Verantwortung für die Inhalte, Datenschutzrichtlinien oder Praktiken von Websites oder Diensten Dritter.",
+        "links-p-extra": "Wir haben keine Kontrolle über und übernehmen keine Verantwortung für die Inhalte, Datenschutzrichtlinien oder Praktiken von Websites oder Diensten Dritter.",
         "change": "Änderungen dieser Datenschutzerklärung",
         "change-p": "Wir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über alle Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
         "change-p-1": "Wir informieren Sie per E-Mail und/oder durch einen gut sichtbaren Hinweis in unserem Service, bevor die Änderung wirksam wird, und aktualisieren das Datum der „Letzten Aktualisierung“ oben in dieser Datenschutzerklärung.",
@@ -173,5 +173,13 @@
         "contact-p": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, können Sie uns kontaktieren:",
         "contact-list": "Per E-Mail: tim.daubner@outlook.com",
         "contact-list-1": "Per Telefon: 015110491649"
+    },
+    "FORM": {
+        "NAME": "Ihr Name",
+        "EMAIL": "Ihre E-Mail",
+        "MSG": "Ihre Nachricht",
+        "NAME_REQUIRED": "Ihr Name ist erforderlich",
+        "EMAIL_REQUIRED": "Ihre E-Mail ist erforderlich",
+        "MSG_REQUIRED": "Ihre Nachricht ist erforderlich"
     }
 }

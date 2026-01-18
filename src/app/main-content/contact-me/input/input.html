@@ -1,12 +1,32 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="frame-input">
         <div class="info-data">
-            <input [(ngModel)]="contactData.name" name="name" type="text" [ngClass]="inputStyles[0]" [placeholder]= "placeholders[0]" (ngModelChange)="onInputChange($event,0)" required>
-            <input [(ngModel)]="contactData.email" name="email" type="email" [ngClass]="inputStyles[1]" [placeholder]= "placeholders[1]" (ngModelChange)="onInputChange($event,1)" required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <div class="wrapper">
+                <input [(ngModel)]="contactData.name" name="name" type="text" [ngClass]="inputStyles[0]"
+                    [placeholder]="placeholders[0]" (ngModelChange)="onInputChange($event,0)"
+                    pattern="(?=(?:.*[a-zA-ZÄÖÜäöüß]){3,})[a-zA-ZÄÖÜäöüß ]+" #name="ngModel" required>
+                @if(!name.valid && name.touched) {
+                <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                }
+            </div>
+            <div class="wrapper">
+                <input [(ngModel)]="contactData.email" name="email" type="email" [ngClass]="inputStyles[1]"
+                    [placeholder]="placeholders[1]" (ngModelChange)="onInputChange($event,1)" #email="ngModel" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    [ngClass]="{'error-input': !email.valid && email.touched}">
+                @if(!email.valid && email.touched) {
+                <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                }
+            </div>
         </div>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" [ngClass]="inputStyles[2]"[placeholder]= "placeholders[2]" (ngModelChange)="onInputChange($event,2)"
-            required></textarea>
+        
+        <div class="wrapper">
+            <textarea [(ngModel)]="contactData.message" name="message" [ngClass]="inputStyles[2]"
+            [placeholder]="placeholders[2]" (ngModelChange)="onInputChange($event,2)" #msg="ngModel" pattern="(?=(?:.*[A-Za-zÄÖÜäöüß]){3,})[\s\S]*" required></textarea>
+            @if(!msg.valid && msg.touched) {
+            <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+            }
+        </div>
     </div>
     <div class="checkbox">
         <input type="checkbox" [(ngModel)]="contactData.privacy" name="privacy" id="privacy" required>

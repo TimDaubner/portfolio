@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { Component, inject, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { LangChangeEvent, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -16,6 +16,12 @@ export class Input {
 
   http = inject(HttpClient);
 
+  @ViewChild('name') name!: NgModel;
+  @ViewChild('email') email!: NgModel;
+  @ViewChild('msg') msg!: NgModel;
+
+  isCommitted = false;
+
   contactData: {
     name: string,
     email: string,
@@ -29,9 +35,9 @@ export class Input {
     }
 
   placeholders: string[] = [
-    "Your Name",
-    "Your Email",
-    "Your Message"
+    'FORM.NAME',
+    'FORM.EMAIL',
+    'FORM.MSG'
   ]
 
   inputStyles: string[] = [
@@ -51,11 +57,36 @@ export class Input {
     },
   };
 
+  langSub: any;
+
+  ngOnInit() {
+    this.langSub = this.translate.onLangChange.subscribe(() => {
+      this.updatePlaceholders();
+    });
+
+    this.updatePlaceholders();
+  }
+
+  ngOnDestroy() {
+    this.langSub.unsubscribe();
+  }
+
+  updatePlaceholders() {
+    this.placeholders = [
+      this.translate.instant('FORM.NAME'),
+      this.translate.instant('FORM.EMAIL'),
+      this.translate.instant('FORM.MSG')
+    ];
+
+    this.inputStyles = ['placeholder-default', 'placeholder-default', 'placeholder-default'];
+  }
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.isCommitted = true;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -69,18 +100,21 @@ export class Input {
   }
 
   onInputChange(value: string, index: number) {
-    if (value != '') return;
+    this.isCommitted = false;
     switch (index) {
       case 0:
-        this.placeholders[index] = "Your name is required";
+        if (this.name.valid) return;
+        this.placeholders[index] = this.translate.instant('FORM.NAME_REQUIRED');
         this.inputStyles[index] = "placeholder-error";
         break;
       case 1:
-        this.placeholders[index] = "Your email is required";
+        if (this.email.valid) return;
+        this.placeholders[index] = this.translate.instant('FORM.EMAIL_REQUIRED');
         this.inputStyles[index] = "placeholder-error";
         break;
       case 2:
-        this.placeholders[index] = "Your message is required";
+        if (this.msg.valid) return;
+        this.placeholders[index] = this.translate.instant('FORM.MSG_REQUIRED');
         this.inputStyles[index] = "placeholder-error";
         break;
       default:
