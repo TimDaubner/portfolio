@@ -10,10 +10,10 @@
 
     </div>
     <nav class="burger_menu" [ngClass]="{'d_none' : isMenuHidden}">
-        <a href="#about-me">{{'header.first' | translate}}</a>
-        <a href="#my-skills">{{'header.second' | translate}}</a>
-        <a href="#my-projects">{{'header.third' | translate}}</a>
-        <a href="#contact-me">{{'header.fourth' | translate}}</a>
+        <a (click)="toggleMenu()" href="#about-me">{{'header.first' | translate}}</a>
+        <a (click)="toggleMenu()" href="#my-skills">{{'header.second' | translate}}</a>
+        <a (click)="toggleMenu()" href="#my-projects">{{'header.third' | translate}}</a>
+        <a (click)="toggleMenu()" href="#contact-me">{{'header.fourth' | translate}}</a>
         <div class="frame_lang_burger">
             <button (click)="useLanguage('de')" class="de_btn">DE</button>|
             <button (click)="useLanguage('en')" class="en_btn">EN</button>
