@@ -14,7 +14,7 @@ section {
         aspect-ratio: 1 / 1;
         padding: 8px;
         border-radius: 24px;
-        margin-right: 128px;
+        margin-right: 100px;
     }
 
     >div {
@@ -109,11 +109,13 @@ section {
         >.relocate-hover {
             opacity: 1;
         }
-        >.luggage{
+
+        >.luggage {
             opacity: 0;
         }
     }
-    >.luggage{
+
+    >.luggage {
         opacity: 1;
         transition: opacity 0.2s ease;
     }

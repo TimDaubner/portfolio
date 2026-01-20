@@ -197,6 +197,51 @@ input:-webkit-autofill:active {
     top: 16px;
 }
 
+.overlay-popup {
+    position: absolute;
+    left: -50%;
+    top: 50vh;
+    padding: 16px;
+    font-size: 32px;
+    color: rgba($color-torquiose, 1);
+    background-color: $color-darkblue;
+    border: solid rgba($color-torquiose, 1);
+}
+
+.overlay-popup.animate {
+    animation: fadeInOut 4s ease-in;
+}
+
+@keyframes fadeInOut {
+
+    /* start off-screen & invisible */
+    0% {
+        left: -100%;
+        opacity: 0;
+        animation-timing-function: cubic-bezier(.1, 0, .2, 1); // very slow start
+    }
+
+    /* SLOW slide + fade in */
+    30% {
+        left: 25%;
+        opacity: 1;
+        animation-timing-function: linear;
+    }
+
+    /* stay visible */
+    80% {
+        left: 25%;
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    /* FAST exit + fade out */
+    100% {
+        left: -100%;
+        opacity: 0;
+    }
+}
+
 @media(max-width:1400px) {
     form {
         display: flex;
@@ -235,6 +280,13 @@ input:-webkit-autofill:active {
 }
 
 @media(max-width:900px) {
+    .overlay-popup {
+        left: -300%;
+        top: 70vh;
+        padding: 8px;
+        font-size: 16px;
+    }
+
     .checkbox {
         input {
             margin-left: 24px;
@@ -257,6 +309,7 @@ input:-webkit-autofill:active {
             >.info-data {
                 >.wrapper {
                     width: 100%;
+
                     >input {
                         width: 200px;
                     }

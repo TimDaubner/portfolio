@@ -45,7 +45,8 @@
     "contact-me": {
         "titel": "Contact me",
         "description": "I’m always excited to connect with others and explore new opportunities in front-end development. I’m particularly interested in building responsive, user-friendly interfaces using Angular, HTML, CSS, and JavaScript. If you’re working on a project that needs a passionate front-end developer, I’d love to contribute!",
-        "policy": "I have read the <a href='policy' class='policy-link'>Privacy Policy</a> and agree to the processing of my data as described."
+        "policy": "I have read the <a href='policy' class='policy-link'>Privacy Policy</a> and agree to the processing of my data as described.",
+        "pop-up":"The message has been sent successfully!"
     },
     "footer": {
         "titel": "frontend developer",

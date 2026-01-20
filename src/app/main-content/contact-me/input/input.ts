@@ -112,6 +112,8 @@ export class Input {
     }
   }
 
+  showPopup = false;
+
   onSubmitSend() {
     for (let i = 0; i < this.placeholders.length; i++) {
       switch (i) {
@@ -129,6 +131,10 @@ export class Input {
           break;
       }
     }
+    this.showPopup = true; 
+    setTimeout(() => {
+      this.showPopup = false;
+    }, 4000);
   }
 
   onResetForm() {

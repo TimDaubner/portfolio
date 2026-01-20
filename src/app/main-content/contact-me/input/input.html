@@ -46,4 +46,5 @@
         <input type="submit" value="Send" [disabled]="!contactForm.valid">
     </div>
     <span class="warning" style="color: transparent;">Please enter a message</span>
+    <div class="overlay-popup" [class.animate]="showPopup">{{'contact-me.pop-up' | translate}}</div>
 </form>
