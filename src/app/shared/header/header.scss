@@ -189,3 +189,10 @@ header{
         width:85%;
     }
 }
+
+@media(min-width:2400px){
+    header{
+        padding: 0;
+        width: 1920px;
+    }
+}

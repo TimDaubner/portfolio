@@ -202,3 +202,10 @@ section {
         }
     }
 }
+@media(min-width:2400px) {
+    section{
+        >img{
+            width: 1400px;
+        }
+    }
+}

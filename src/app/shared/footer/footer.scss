@@ -140,31 +140,38 @@ footer {
         margin-top: 32px !important;
     }
 
-        .logo-frame {
-            margin-left: 0;
-            margin-top: 24px;
+    .logo-frame {
+        margin-left: 0;
+        margin-top: 24px;
 
-            >a {
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        .links-frame {
+        >a {
             text-align: center;
-            margin: 0;
-        }
-
-    }
-
-    @media(max-width:800px) {
-        .center-frame {
-            margin-top: 32px !important;
-            margin-right: 0;
-
-            >h4 {
-                font-size: 18px;
-            }
+            justify-content: center;
+            align-items: center;
         }
     }
+
+    .links-frame {
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+@media(max-width:800px) {
+    .center-frame {
+        margin-top: 32px !important;
+        margin-right: 0;
+
+        >h4 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media(min-width:2400px) {
+    footer{
+        padding: 0;
+        width: 100%;
+    }
+}
