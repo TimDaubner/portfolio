@@ -69,8 +69,6 @@ form {
     }
 }
 
-
-
 .checkbox {
     margin-top: 32px;
     width: 100%;
@@ -214,20 +212,20 @@ input:-webkit-autofill:active {
 }
 
 @keyframes fadeInOut {
-    
+
     0% {
         left: -100%;
         opacity: 0;
         animation-timing-function: cubic-bezier(.1, 0, .2, 1); // very slow start
     }
-    
+
     30% {
         visibility: visible;
         left: 25%;
         opacity: 1;
         animation-timing-function: linear;
     }
-    
+
     80% {
         visibility: visible;
         left: 25%;
@@ -321,6 +319,45 @@ input:-webkit-autofill:active {
                 >textarea {
                     width: 200px;
                 }
+            }
+        }
+    }
+}
+
+@media(min-width:2400px) {
+    .info-data {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .wrapper {
+            width: 18vw;
+
+            >input {
+                background-color: transparent;
+                border: 2px solid $color-torquiose;
+                padding: 16px;
+                color: $color-torquiose;
+                width: 650px;
+
+                &::placeholder {
+                    color: #02f4c098;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: darken($color-torquiose, 10%);
+                    box-shadow: 0 0 6px rgba($color-torquiose, 0.5);
+                }
+            }
+        }
+    }
+    .frame-input {
+        justify-content: flex-start;
+
+        .wrapper {
+            >textarea {
+                width: 800px !important;
             }
         }
     }
