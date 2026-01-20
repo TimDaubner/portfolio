@@ -65,6 +65,13 @@ export class Input {
     });
 
     this.updatePlaceholders();
+    this.translate.get(['FORM.NAME', 'FORM.EMAIL', 'FORM.MSG']).subscribe(translations => {
+      this.placeholders = [
+        translations['FORM.NAME'],
+        translations['FORM.EMAIL'],
+        translations['FORM.MSG']
+      ];
+    });
   }
 
   ngOnDestroy() {
@@ -88,6 +95,11 @@ export class Input {
           next: (response) => {
             this.isCommitted = true;
             ngForm.resetForm();
+            this.onSubmitSend();
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.onResetForm();
+            }, 2000);
           },
           error: (error) => {
             console.error(error);
@@ -95,8 +107,58 @@ export class Input {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.onResetForm();
       ngForm.resetForm();
     }
+  }
+
+  onSubmitSend() {
+    for (let i = 0; i < this.placeholders.length; i++) {
+      switch (i) {
+        case 0:
+          this.placeholders[i] = this.translate.instant('FORM.SEND_NAME');
+          this.inputStyles[i] = "placeholder-success";
+          break;
+        case 1:
+          this.placeholders[i] = this.translate.instant('FORM.SEND_EMAIL');
+          this.inputStyles[i] = "placeholder-success";
+          break;
+        case 2:
+          this.placeholders[i] = this.translate.instant('FORM.SEND_MSG');
+          this.inputStyles[i] = "placeholder-success";
+          break;
+      }
+    }
+  }
+
+  onResetForm() {
+    this.resetController();
+    for (let i = 0; i < this.placeholders.length; i++) {
+      switch (i) {
+        case 0:
+          this.placeholders[i] = this.translate.instant('FORM.NAME');
+          this.inputStyles[i] = "placeholders-default";
+          break;
+        case 1:
+          this.placeholders[i] = this.translate.instant('FORM.EMAIL');
+          this.inputStyles[i] = "placeholders-default";
+          break;
+        case 2:
+          this.placeholders[i] = this.translate.instant('FORM.MSG');
+          this.inputStyles[i] = "placeholders-default";
+          break;
+      }
+
+    }
+  }
+
+  resetController() {
+    this.name.control.markAsUntouched();
+    this.name.control.markAsPristine();
+    this.email.control.markAsUntouched();
+    this.email.control.markAsPristine();
+    this.msg.control.markAsUntouched();
+    this.msg.control.markAsPristine();
   }
 
   onInputChange(value: string, index: number) {

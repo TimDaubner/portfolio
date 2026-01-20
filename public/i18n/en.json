@@ -179,6 +179,9 @@
         "MSG": "Your Message",
         "NAME_REQUIRED": "Your name is required",
         "EMAIL_REQUIRED": "Your email is required",
-        "MSG_REQUIRED": "Your message is required"
+        "MSG_REQUIRED": "Your message is required",
+        "SEND_NAME":"Full name entered",
+        "SEND_EMAIL":"Full e-mail entered",
+        "SEND_MSG":"Full message entered"
     }
 }

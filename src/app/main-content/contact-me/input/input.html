@@ -6,7 +6,10 @@
                     [placeholder]="placeholders[0]" (ngModelChange)="onInputChange($event,0)"
                     pattern="(?=(?:.*[a-zA-ZÄÖÜäöüß]){3,})[a-zA-ZÄÖÜäöüß ]+" #name="ngModel" required>
                 @if(!name.valid && name.touched) {
-                <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                <img class="mark" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                }
+                @if(name.valid && name.touched){
+                <img class="mark" src="assets/imgs/contact-me/green_checkmark.svg" alt="">
                 }
             </div>
             <div class="wrapper">
@@ -15,16 +18,23 @@
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                     [ngClass]="{'error-input': !email.valid && email.touched}">
                 @if(!email.valid && email.touched) {
-                <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                <img class="mark" src="assets/imgs/contact-me/red_mark.svg" alt="">
+                }
+                @if(email.valid && email.touched){
+                <img class="mark" src="assets/imgs/contact-me/green_checkmark.svg" alt="">
                 }
             </div>
         </div>
-        
+
         <div class="wrapper">
             <textarea [(ngModel)]="contactData.message" name="message" [ngClass]="inputStyles[2]"
-            [placeholder]="placeholders[2]" (ngModelChange)="onInputChange($event,2)" #msg="ngModel" pattern="(?=(?:.*[A-Za-zÄÖÜäöüß]){3,})[\s\S]*" required></textarea>
+                [placeholder]="placeholders[2]" (ngModelChange)="onInputChange($event,2)" #msg="ngModel"
+                pattern="(?=(?:.*[A-Za-zÄÖÜäöüß]){3,})[\s\S]*" required></textarea>
             @if(!msg.valid && msg.touched) {
-            <img class="error-mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+            <img class="mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+            }
+            @if(msg.valid && msg.touched){
+            <img class="mark" src="assets/imgs/contact-me/green_checkmark.svg" alt="">
             }
         </div>
     </div>

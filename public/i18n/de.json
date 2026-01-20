@@ -180,6 +180,9 @@
         "MSG": "Ihre Nachricht",
         "NAME_REQUIRED": "Ihr Name ist erforderlich",
         "EMAIL_REQUIRED": "Ihre E-Mail ist erforderlich",
-        "MSG_REQUIRED": "Ihre Nachricht ist erforderlich"
+        "MSG_REQUIRED": "Ihre Nachricht ist erforderlich",
+        "SEND_NAME": "Ganzer name eingegeben",
+        "SEND_EMAIL": "Komplette E-mail eingegeben",
+        "SEND_MSG": "Komplette Nachricht eingegeben"
     }
 }
