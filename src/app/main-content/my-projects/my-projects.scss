@@ -1,6 +1,8 @@
 @use 'variables' as *;
 
 section {
+    overflow-x: hidden;
+    overflow-y: hidden;
     padding: 0 64px;
 
     h2 {

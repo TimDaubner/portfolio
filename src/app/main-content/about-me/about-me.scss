@@ -1,6 +1,7 @@
 @use 'variables' as *;
 
 section {
+    scroll-margin-block-start: 100px;
     padding: 0 64px;
     display: flex;
     justify-content: space-between;

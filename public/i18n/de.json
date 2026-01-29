@@ -45,8 +45,9 @@
     "contact-me": {
         "titel": "Kontaktiere mich",
         "description": "Ich freue mich immer darauf, mit anderen in Kontakt zu treten und neue Möglichkeiten im Frontend-Development zu erkunden. Besonders interessiert mich die Entwicklung von responsiven, benutzerfreundlichen Interfaces mit Angular, HTML, CSS und JavaScript. Wenn Sie an einem Projekt arbeiten, das einen leidenschaftlichen Frontend-Entwickler benötigt, würde ich mich freuen, einen Beitrag leisten zu können!",
-        "policy": "Ich habe die <a href=policy>Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-        "pop-up":"Die Nachricht wurde versendet!"
+        "policy": "Ich habe die <a href=policy target='_blank'>Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "pop-up":"Die Nachricht wurde versendet!",
+        "checkbox":"Vergesse nicht den Haken in der checkbox!"
     },
     "footer": {
         "titel": "Frontend-Entwickler",

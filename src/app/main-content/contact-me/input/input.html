@@ -31,19 +31,22 @@
                 [placeholder]="placeholders[2]" (ngModelChange)="onInputChange($event,2)" #msg="ngModel"
                 pattern="(?=(?:.*[A-Za-zÄÖÜäöüß]){3,})[\s\S]*" required></textarea>
             @if(!msg.valid && msg.touched) {
-            <img class="mark name" src="assets/imgs/contact-me/red_mark.svg" alt="">
+            <img class="mark field-msg" src="assets/imgs/contact-me/red_mark.svg" alt="">
             }
             @if(msg.valid && msg.touched){
-            <img class="mark" src="assets/imgs/contact-me/green_checkmark.svg" alt="">
+            <img class="mark field-msg" src="assets/imgs/contact-me/green_checkmark.svg" alt="">
             }
         </div>
     </div>
     <div class="checkbox">
-        <input type="checkbox" [(ngModel)]="contactData.privacy" name="privacy" id="privacy" required>
+        <input type="checkbox" [(ngModel)]="contactData.privacy" name="privacy" id="privacy" #check="ngModel" required>
         <span [innerHTML]="'contact-me.policy' | translate"></span>
     </div>
     <div class="submit_btn">
         <input type="submit" value="Send" [disabled]="!contactForm.valid">
+        @if(name.valid && email.valid && msg.valid && !check.valid){
+            <span class="checkbox-warning">{{'contact-me.checkbox' | translate}}</span>
+        }
     </div>
     <span class="warning" style="color: transparent;">Please enter a message</span>
     <div class="overlay-popup" [class.animate]="showPopup">{{'contact-me.pop-up' | translate}}</div>

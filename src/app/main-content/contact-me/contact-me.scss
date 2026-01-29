@@ -1,6 +1,7 @@
 @use 'variables' as *;
 
 section {
+    scroll-margin-block-start: 30px;
     padding: 0 64px;
     margin-bottom: 64px;
     display: flex;
@@ -153,7 +154,6 @@ section {
             gap: 16px;
 
             img {
-                margin-right: 24px;
                 width: 25px;
             }
         }

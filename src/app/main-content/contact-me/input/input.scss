@@ -195,6 +195,17 @@ input:-webkit-autofill:active {
     top: 16px;
 }
 
+.checkbox-warning {
+    color: rgba($color-torquiose, 1);
+    position: absolute;
+    right: 200px;
+    width: 220px;
+}
+
+.field-msg{
+    right:35% !important;
+}
+
 .overlay-popup {
     position: absolute;
     left: -80%;
@@ -240,6 +251,13 @@ input:-webkit-autofill:active {
 }
 
 @media(max-width:1400px) {
+    .checkbox-warning {
+        color: rgba($color-torquiose, 1);
+        position: absolute;
+        right: 200px;
+        width: 220px;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -352,6 +370,7 @@ input:-webkit-autofill:active {
             }
         }
     }
+
     .frame-input {
         justify-content: flex-start;
 
