@@ -22,8 +22,8 @@ export class MyProjects {
     image: "assets/imgs/my-projects/join_project.png",
     skills: ["Angular", "Typescript", "HTML", "CSS", "Firebase"],
     description: "my-projects.join.description",
-    url:"",
-    live_url:""
+    url:"https://github.com/TimDaubner/Join",
+    live_url:"http://join.tim-daubner.de/"
   },
   {
     name: "Pokédex",
