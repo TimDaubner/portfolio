@@ -17,19 +17,14 @@ export class TeamComments {
     comment: string
   }[] = [
       {
-        name: "Noah Mueller",
-        project_name: "Project Jump Quest",
+        name: "Anastasia Tsypkaykina",
+        project_name: "Kochwelt",
         comment: "team-comments.first"
       },
       {
-        name: "Evelyn Marx",
-        project_name: "Project Pollo Loco",
+        name: "Malte Schütte",
+        project_name: "Join",
         comment: "team-comments.second"
-      },
-      {
-        name: "James Rugman",
-        project_name: "Project Join",
-        comment: "team-comments.third"
       },
     ]
 
