@@ -123,6 +123,8 @@ footer {
 
     .responsive {
         display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     .center-frame {
@@ -135,14 +137,15 @@ footer {
         flex-direction: column;
         height: 30vh;
     }
-
+    
     .center-frame {
         margin-top: 32px !important;
     }
-
+    
     .logo-frame {
         margin-left: 0;
         margin-top: 24px;
+        height:50%;
 
         >a {
             text-align: center;
@@ -170,7 +173,7 @@ footer {
 }
 
 @media(min-width:2400px) {
-    footer{
+    footer {
         padding: 0;
         width: 100%;
     }

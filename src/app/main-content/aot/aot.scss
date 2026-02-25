@@ -109,7 +109,6 @@ section {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-
         >img {
             width: 60%;
         }
@@ -130,12 +129,15 @@ section {
             }
         }
     }
-}
+    .aot_infos {
+        h1 {
+            font-size: 64px !important;
+            text-align: center !important;
+        }
 
-@media(max-width:1200px) {
-    section {
-        >img {
-            width: 80%;
+        h2 {
+            font-size: 42px !important;
+            text-align: center !important;
         }
     }
 }
@@ -145,7 +147,7 @@ section {
         padding-top: 10px;
 
         >img {
-            width: 100%;
+            width: 70%;
         }
     }
 }
@@ -162,12 +164,12 @@ section {
 
     .aot_infos {
         h1 {
-            font-size: 76px !important;
+            font-size: 62px !important;
             text-align: center !important;
         }
 
         h2 {
-            font-size: 48px !important;
+            font-size: 32px !important;
             text-align: center !important;
         }
     }

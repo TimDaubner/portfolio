@@ -1,14 +1,13 @@
 @use 'variables' as *;
 
 section {
-    scroll-margin-block-start: 100px;
+    scroll-margin-block-start: 160px;
     padding: 0 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     height: 100vh;
-    margin-top: 64px;
 
     >img {
         width: 779px;
