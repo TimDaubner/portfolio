@@ -90,7 +90,7 @@ export class Input {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData),{ responseType: 'text' })
         .subscribe({
           next: (response) => {
             this.isCommitted = true;

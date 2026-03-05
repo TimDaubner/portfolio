@@ -107,6 +107,9 @@ footer {
 }
 
 @media(max-width:1400px) {
+    .normal{
+        padding-left: 10vw;
+    }
     footer {
         width: 100%;
         padding: 0;
@@ -115,6 +118,21 @@ footer {
     .links-frame {
         margin-right: 120px;
         margin-left: 16px;
+    }
+
+    .center-frame {
+        margin-right: 16px;
+    }
+}
+
+@media(max-width:1200px){
+
+}
+
+@media(max-width:950px) {
+    footer {
+        flex-direction: column;
+        height: 30vh;
     }
 
     .normal {
@@ -128,24 +146,13 @@ footer {
     }
 
     .center-frame {
-        margin-right: 16px;
-    }
-}
-
-@media(max-width:950px) {
-    footer {
-        flex-direction: column;
-        height: 30vh;
-    }
-    
-    .center-frame {
         margin-top: 32px !important;
     }
-    
+
     .logo-frame {
         margin-left: 0;
         margin-top: 24px;
-        height:50%;
+        height: 50%;
 
         >a {
             text-align: center;

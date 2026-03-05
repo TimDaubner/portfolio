@@ -55,6 +55,7 @@ form {
             padding: 16px;
             color: $color-torquiose;
             width: 30vw;
+            max-width: 800px;
 
             &::placeholder {
                 color: #02f4c098;
@@ -267,10 +268,7 @@ input:-webkit-autofill:active {
 
 @media(max-width:1400px) {
     .checkbox-warning {
-        color: rgba($color-torquiose, 1);
-        position: absolute;
-        right: 200px;
-        width: 220px;
+        right: 25vw;
     }
 
     form {
@@ -331,6 +329,10 @@ input:-webkit-autofill:active {
         }
     }
 
+    .checkbox-warning {
+        margin-top: 55px;
+    }
+
     .submit_btn {
         justify-content: center;
         margin-right: 0;
@@ -373,6 +375,18 @@ input:-webkit-autofill:active {
     }
 }
 
+@media(min-width:2200px) {
+    .frame-input {
+        .wrapper {
+            >textarea {
+                width: 23.5vw !important;
+                min-width: 730px;
+            }
+        }
+    }
+}
+
+
 @media(min-width:3200px) {
     .info-data {
         display: flex;
@@ -413,6 +427,46 @@ input:-webkit-autofill:active {
     }
 }
 
+@media(min-width:3200px) {
+    .info-data {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .wrapper {
+            width: 23.5vw;
+
+            >input {
+                background-color: transparent;
+                border: 2px solid $color-torquiose;
+                padding: 16px;
+                color: $color-torquiose;
+                width: 650px;
+
+                &::placeholder {
+                    color: #02f4c098;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: darken($color-torquiose, 10%);
+                    box-shadow: 0 0 6px rgba($color-torquiose, 0.5);
+                }
+            }
+        }
+    }
+
+    .frame-input {
+        justify-content: flex-start;
+
+        .wrapper {
+            >textarea {
+                width: 23.5vw !important;
+            }
+        }
+    }
+}
+
 @media(min-width:3800px) {
     .info-data {
         display: flex;
@@ -437,7 +491,7 @@ input:-webkit-autofill:active {
 
         .wrapper {
             >textarea {
-                width: 800px !important;
+                width: 23.5vw !important;
             }
         }
     }
