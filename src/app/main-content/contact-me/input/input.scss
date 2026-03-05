@@ -202,8 +202,8 @@ input:-webkit-autofill:active {
     width: 220px;
 }
 
-.field-msg{
-    right:35% !important;
+.field-msg {
+    right: 35% !important;
 }
 
 .overlay-popup {
@@ -342,14 +342,14 @@ input:-webkit-autofill:active {
     }
 }
 
-@media(min-width:2400px) {
+@media(min-width:3200px) {
     .info-data {
         display: flex;
         flex-direction: column;
         gap: 32px;
 
         .wrapper {
-            width: 18vw;
+            width: 23.5vw;
 
             >input {
                 background-color: transparent;
@@ -378,6 +378,44 @@ input:-webkit-autofill:active {
             >textarea {
                 width: 800px !important;
             }
+        }
+    }
+}
+
+@media(min-width:3800px) {
+    .info-data {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .wrapper {
+        width: 18.5vw;
+    }
+}
+
+@media(aspect-ratio: 4/3) {
+    .info-data {
+        .wrapper {
+            width: 23.5vw;
+        }
+    }
+
+    .frame-input {
+        justify-content: flex-start;
+
+        .wrapper {
+            >textarea {
+                width: 800px !important;
+            }
+        }
+    }
+}
+
+@media(max-width: 3100px) and (aspect-ratio: 4/3) {
+    .info-data {
+        .wrapper {
+            width: 39.5vw;
         }
     }
 }
