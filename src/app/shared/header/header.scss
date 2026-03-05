@@ -3,7 +3,7 @@ $color-darkblue: #13074E;
 $color-darkorange: #E15544;
 $color-darkblue-transparent: #13074ec8;
 
-header{
+header {
     position: fixed;
     width: 90%;
     height: 15vh;
@@ -15,13 +15,13 @@ header{
 }
 
 @media(min-width:1980px) {
-    header{
+    header {
         width: 45%;
     }
 }
 
 @media(max-width:1400px) {
-    header{
+    header {
         width: 100%;
         height: 20vh;
         padding: 0;
@@ -29,30 +29,35 @@ header{
     }
 }
 
-.frame_nav{
+.frame_nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    >a{
+
+    >a {
         width: 60%;
         height: 60%;
-        >img{
+
+        >img {
             min-width: 130px;
             max-height: 85px;
             width: 100%;
             height: 100%;
         }
     }
-    >nav{
-        >a{
+
+    >nav {
+        >a {
             white-space: nowrap;
             width: 100%;
             color: $color-darkorange;
             transition: all 175ms ease-in-out;
-            &:hover{
+
+            &:hover {
                 color: $color-torquiose;
             }
         }
+
         color: $color-darkorange;
         font-size: 22px;
         margin-left: 120px;
@@ -62,13 +67,14 @@ header{
     }
 }
 
-.frame_lang{
+.frame_lang {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 18px;
-    button{
+
+    button {
         font-weight: 700;
         font-size: 18px;
         color: $color-darkorange;
@@ -77,20 +83,22 @@ header{
         border: none;
         background-color: transparent;
         transition: all 175ms ease-in-out;
-        &:hover{
+
+        &:hover {
             color: $color-torquiose;
             cursor: pointer;
         }
     }
 }
 
-.frame_lang_burger{
+.frame_lang_burger {
     display: none;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 18px;
-    button{
+
+    button {
         font-weight: 700;
         font-size: 18px;
         color: $color-darkorange;
@@ -99,52 +107,55 @@ header{
         border: none;
         background-color: transparent;
         transition: all 175ms ease-in-out;
-        &:hover{
+
+        &:hover {
             color: $color-torquiose;
             cursor: pointer;
         }
     }
 }
 
-@media(max-width:1400px){
-    .frame_nav{
-        >nav{
+@media(max-width:1400px) {
+    .frame_nav {
+        >nav {
             display: none;
         }
     }
-    .frame_lang{
+
+    .frame_lang {
         display: none;
     }
-    .frame_lang_burger{
+
+    .frame_lang_burger {
         display: flex;
     }
 }
 
-.background{
+.background {
     z-index: 10;
     position: fixed;
-    top:-20px;
+    top: -20px;
     width: 100%;
-    height: 14vh;
+    height: 15vh;
     background-color: $color-darkblue;
     filter: blur(10px);
 }
 
-.background-transparent{
-    z-index: 100;
+.background-transparent {
+    z-index: 10;
     position: fixed;
-    top:100px;
-    width:100%;
+    top: 100px;
+    width: 100%;
     height: 5vh;
     background-color: $color-darkblue-transparent;
     filter: blur(10px);
 }
 
-.d_none{
+.d_none {
     display: none !important;
 }
 
-.burger{
+.burger {
     display: none;
     position: fixed;
     top: 15px;
@@ -156,9 +167,10 @@ header{
     z-index: 9999;
 }
 
-.burger_menu{
+.burger_menu {
     position: absolute;
     padding-top: 64px;
+    padding-bottom: 24px;
     gap: 24px;
     top: 0;
     left: 0;
@@ -172,27 +184,54 @@ header{
     z-index: 9999;
 }
 
-@media(max-width:1400px){
-    .burger{
+@media(max-width:1400px) {
+    .background{
+        height: 135px;
+    }
+    .burger {
         display: block;
     }
+
+    .background-transparent {
+        height: 10vh;
+        top: 60px;
+    }
 }
 
-@media(max-width:800px){
-    .burger{
+@media(max-width:920px) {
+    .background{
+        height: 155px !important;
+    }
+}
+
+@media(max-width:900px) {
+    .burger {
         right: 16px;
     }
-}
 
-@media(max-width:400px){
-    .burger_menu{
-        width:85%;
+    .background{
+        height: 135px !important;
     }
 }
 
-@media(min-width:2400px){
-    header{
+@media(max-width:400px) {
+    .burger_menu {
+        width: 85%;
+    }
+}
+
+@media(min-width:2400px) {
+    header {
         padding: 0;
         width: 1920px;
+        max-height: 150px;
+    }
+
+    .background {
+        max-height: 150px;
+    }
+
+    .background-transparent {
+        max-height: 100px;
     }
 }

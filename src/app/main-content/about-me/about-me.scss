@@ -322,3 +322,9 @@ section {
         }
     }
 }
+
+@media(max-height:800px){
+    section{
+        margin-top: 50vh;
+    }
+}
