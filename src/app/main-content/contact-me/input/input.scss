@@ -202,9 +202,12 @@ input:-webkit-autofill:active {
     width: 220px;
 }
 
+
 .field-msg {
-    right: 35% !important;
+    right: 32.5% !important;
 }
+
+@media(max-width: 414px) {}
 
 .overlay-popup {
     position: absolute;
@@ -250,6 +253,18 @@ input:-webkit-autofill:active {
     }
 }
 
+@media(max-width:5200px) {
+    .field-msg {
+        right: -1.5vw !important;
+    }
+}
+
+@media(max-width:3200px) {
+    .field-msg {
+        right: 1vw !important;
+    }
+}
+
 @media(max-width:1400px) {
     .checkbox-warning {
         color: rgba($color-torquiose, 1);
@@ -268,8 +283,8 @@ input:-webkit-autofill:active {
             flex-direction: column;
 
             >.info-data {
-                >input {
-                    width: 300px;
+                input {
+                    width: 75vw !important;
                     min-width: 200px;
                 }
             }
@@ -277,8 +292,8 @@ input:-webkit-autofill:active {
             .wrapper {
                 width: 100%;
 
-                >textarea {
-                    width: 30vw;
+                textarea {
+                    width: 75vw;
                 }
             }
         }
@@ -291,6 +306,10 @@ input:-webkit-autofill:active {
 
     .mark {
         right: 4%;
+    }
+
+    .field-msg {
+        right: 5vw !important;
     }
 }
 
@@ -316,9 +335,17 @@ input:-webkit-autofill:active {
         justify-content: center;
         margin-right: 0;
     }
+
+    .mark {
+        right: 4%;
+    }
+
+    .field-msg {
+        right: 6vw !important;
+    }
 }
 
-@media(max-width:400px) {
+@media(max-width:414px) {
     form {
         >.frame-input {
             >.info-data {
@@ -326,7 +353,7 @@ input:-webkit-autofill:active {
                     width: 100%;
 
                     >input {
-                        width: 200px;
+                        width: 75vw;
                     }
                 }
             }
@@ -335,10 +362,14 @@ input:-webkit-autofill:active {
                 width: 100%;
 
                 >textarea {
-                    width: 200px;
+                    width: 75vw;
                 }
             }
         }
+    }
+
+    .field-msg {
+        right: 4vw !important;
     }
 }
 
@@ -390,7 +421,7 @@ input:-webkit-autofill:active {
     }
 
     .wrapper {
-        width: 18.5vw;
+        width: 18.5vw !important;
     }
 }
 
